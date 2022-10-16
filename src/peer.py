@@ -48,7 +48,7 @@ class Peer(Thread):
             random_neighbor_id = neighbor_list[random.randint(0, len(neighbor_list)-1)]
             self.neighbors[random_neighbor_id] = self.ns.lookup(random_neighbor_id)
 
-            with Pyro5.server.Proxy(self.neighbors[random_neighbor_id]) as neighbor:
+            with Pyro5.api.Proxy(self.neighbors[random_neighbor_id]) as neighbor:
                 try:
                     self.executor.submit(neighbor.add_neighbor, self.id)
                 except Exception as e:
