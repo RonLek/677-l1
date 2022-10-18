@@ -16,7 +16,7 @@ def get_people(config):
     # else:
     #     # otherwise, default to the number specified in the config file
     #     n_people = int(config["DEFAULT"]["N_PEOPLE"])
-    n_people = 3
+    n_people = 6
     n_items = 5
     roles = ['buyer', 'seller']
     goods = ['fish', 'salt', 'boar']
@@ -39,9 +39,19 @@ def get_people(config):
     # Future implementation may include hmac key for security
     # haskey = False
 
-    for i in range(n_people):
+    # at least 1 buyer
+    role = 'buyer'
+    id = role + str(n_people-2)
+    people.append(Peer(id, role, n_items, goods, ns_name))
+
+    # at least 1 seller
+    role = 'seller'
+    id = role + str(n_people-1)
+    people.append(Peer(id, role, n_items, goods, ns_name))
+
+    for i in range(n_people - 2):
         role = roles[random.randint(0,len(roles) - 1)]
-        id = role + str(i) + "@localhost" # + socket.gethostname()
+        id = role + str(i) # + socket.gethostname()
         # n_items = int(config["DEFAULT"]["N_ITENS"])
         peer = Peer(id, role, n_items, goods, ns_name)
         people.append(peer)
