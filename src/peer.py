@@ -30,11 +30,10 @@ class Peer(Thread):
         neighbor_list = []
         ns_dict = self.ns.list()
         re_pattern = "seller[0-9]+@.|buyer[0-9]+@."
+        # print("ns_dict", ns_dict)
         for id in ns_dict:
-            # TODO: add hostname
-            if "NameServer" not in id and self.id != id and re.match(re_pattern, id):
+            if "NameServer" not in id and self.id != id and re.match(re_pattern, id) and self.hostname in id:
                 neighbor_list.append(id)
-
         self.connect_neighbors(neighbor_list)
 
         neighbor_list.clear()
@@ -82,8 +81,6 @@ class Peer(Thread):
                 else:
                     print(time.time(), self.id, "joins to sell ", self.product_name)
 
-                print("reached here")
-                
                 self.executor.submit(daemon.requestLoop)
                 self.get_random_neighbors()
 
@@ -91,13 +88,18 @@ class Peer(Thread):
 
                     lookup_requests = []
 
-                    for neighbor_uri in self.neighbors:
-                        with Pyro5.api.Proxy("PYRONAME:"+neighbor_uri) as neighbor:
+                    print(self.neighbors, "\n")
+                    for neighbor_name in self.neighbors:
+                        with Pyro5.api.Proxy(self.neighbors[neighbor_name]) as neighbor:
                             search_path = [self.id]
-                            print(time.time() , self.id, "searching for ", self.product_name, " in ", neighbor_uri)
-                            lookup_requests.append(self.executor.submit(neighbor.lookup, self.id, self.product_name, 5, search_path))
+                            print(time.time() , self.id, "searching for ", self.product_name, " in ", neighbor_name)
+                            print("neighbor", neighbor)
+                            # neighbor._pyroClaimOwnership()
+                            lookup_requests.append(self.executor.submit(neighbor.lookup, self.id, self.product_name, 5, search_path, neighbor))
+                            print("lookup_requests", lookup_requests)
 
                     for request in lookup_requests:
+
                         request.result()
 
                     with self.seller_list_lock:
@@ -126,13 +128,15 @@ class Peer(Thread):
                             
 
     @Pyro5.server.expose
-    def lookup(self, bID, product_name, hopcount, search_path):
+    def lookup(self, bID, product_name, hopcount, search_path, neighbor):
         # this procedure, executed initially by buyer processes then recursively 
         # between directly connected peer processes in the network, should search 
         # the network; all matching sellers respond to this message with their IDs. 
         # The hopcount, which should be set lower than the maximum distance between peers in the network, 
         # is decremented at each hop and the message is discarded when it reaches 0.
-
+        
+        neighbor._pyroClaimOwnership()
+        print("within lookup")
         hopcount -= 1
 
         if hopcount < 0:
@@ -147,8 +151,9 @@ class Peer(Thread):
                 
             else:
                 # continue lookup
+                print("within continue lookup")
                 for neighbor_name in self.neighbors and neighbor_name not in search_path:
-                    with Pyro5.api.Proxy("PYRONAME:" + neighbor_name) as neighbor:
+                    with Pyro5.api.Proxy("PYRONAME:" + neighbor_name + "@localhost") as neighbor:
                         self.executor.submit(neighbor.lookup, bID, product_name, hopcount, search_path)
 
         except Exception as e:

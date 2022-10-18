@@ -43,7 +43,6 @@ def get_people(config):
         role = roles[random.randint(0,len(roles) - 1)]
         id = role + str(i) + "@localhost" # + socket.gethostname()
         # n_items = int(config["DEFAULT"]["N_ITENS"])
-        print('within join')
         peer = Peer(id, role, n_items, goods, ns_name)
         people.append(peer)
 
@@ -61,7 +60,6 @@ if __name__ == "__main__":
     time.sleep(2)
     try:
         for person in people:
-            print('within for loop')
             person.start()
     except KeyboardInterrupt:
         sys.exit()

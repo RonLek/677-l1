@@ -1573,3 +1573,1323 @@ Pyro5.errors.ProtocolError: invalid protocol version: 48
 [2022-10-16 18:19:52.913,Pyro5.threadpoolserver,DEBUG] closing down
 [2022-10-16 18:19:52.918,Pyro5.server,DEBUG] daemon closing
 [2022-10-16 18:19:52.919,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:21:05.011,Pyro5,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2022-10-17 16:21:05.058,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.server.DaemonObject'>
+[2022-10-17 16:21:05.060,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.nameserver.NameServer'>
+[2022-10-17 16:21:05.064,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:21:05.064,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:21:05.065,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:21:05.065,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:21:05.065,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:21:05.065,Pyro5.client,ERROR] cannot connect to ('127.0.1.1', 9090): [Errno 111] Connection refused
+[2022-10-17 16:21:05.065,Pyro5.core,DEBUG] broadcast locate
+[2022-10-17 16:21:07.168,Pyro5.core,DEBUG] broadcast locate failed, try direct connection on NS_HOST
+[2022-10-17 16:21:07.168,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:21:07.169,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:21:07.170,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:21:07.171,Pyro5.naming,DEBUG] using volatile in-memory dict storage
+[2022-10-17 16:21:07.172,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:21:07.173,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:21:07.176,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:21:07.177,Pyro5.server,DEBUG] daemon created on localhost:9090 - IPv4 (pid 21321)
+[2022-10-17 16:21:07.177,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:21:07.177,Pyro5.naming,DEBUG] autoclean not enabled
+[2022-10-17 16:21:07.177,Pyro5.naming,INFO] nameserver daemon created
+[2022-10-17 16:21:07.178,Pyro5.naming,INFO] Not starting NS broadcast server because NS is bound to localhost
+[2022-10-17 16:21:07.178,Pyro5.server,INFO] daemon localhost:9090 entering requestloop
+[2022-10-17 16:21:07.178,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:21:09.174,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:21:09.175,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:21:09.176,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 33892) - unencrypted
+[2022-10-17 16:21:09.177,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:21:09.179,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:21:09.179,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:21:09.179,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:21:09.180,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:21:09.180,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:21:09.181,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 33894) - unencrypted
+[2022-10-17 16:21:09.182,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:21:09.183,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:21:09.184,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:21:09.184,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:21:09.184,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:21:09.184,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:21:09.186,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 33904) - unencrypted
+[2022-10-17 16:21:09.186,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:21:09.188,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:21:09.189,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:21:09.189,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:21:11.192,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:21:11.193,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:21:11.194,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:21:11.195,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:21:11.196,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:21:11.196,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:21:11.200,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:21:11.202,Pyro5.server,DEBUG] daemon created on localhost:43815 - IPv4 (pid 21321)
+[2022-10-17 16:21:11.202,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:21:11.207,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:21:11.207,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:21:11.211,Pyro5.server,DEBUG] daemon created on localhost:39337 - IPv4 (pid 21321)
+[2022-10-17 16:21:11.211,Pyro5.server,INFO] daemon localhost:43815 entering requestloop
+[2022-10-17 16:21:11.212,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:21:11.212,Pyro5.server,DEBUG] daemon created on localhost:39783 - IPv4 (pid 21321)
+[2022-10-17 16:21:11.213,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:21:11.215,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:21:11.218,Pyro5.server,INFO] daemon localhost:39337 entering requestloop
+[2022-10-17 16:21:11.219,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:21:11.225,Pyro5.server,INFO] daemon localhost:39783 entering requestloop
+[2022-10-17 16:21:11.226,Pyro5.client,DEBUG] getting metadata for object obj_35bf67d88f8a4b939c61bdb5beb81b19
+[2022-10-17 16:21:11.226,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:21:11.228,Pyro5.client,DEBUG] connecting to PYRO:obj_35bf67d88f8a4b939c61bdb5beb81b19@localhost:39783
+[2022-10-17 16:21:11.231,Pyro5.client,DEBUG] getting metadata for object obj_fc54900b73fa4bd0a8fc946979645bd4
+[2022-10-17 16:21:11.232,Pyro5.client,DEBUG] connecting to PYRO:obj_fc54900b73fa4bd0a8fc946979645bd4@localhost:43815
+[2022-10-17 16:21:11.233,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 52376) - unencrypted
+[2022-10-17 16:21:11.234,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:21:11.234,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 48006) - unencrypted
+[2022-10-17 16:21:11.235,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:21:11.236,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:21:11.237,Pyro5.client,DEBUG] connected to PYRO:obj_fc54900b73fa4bd0a8fc946979645bd4@localhost:43815 - IPv4 - unencrypted
+[2022-10-17 16:21:11.237,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:21:11.238,Pyro5.client,DEBUG] connected to PYRO:obj_35bf67d88f8a4b939c61bdb5beb81b19@localhost:39783 - IPv4 - unencrypted
+[2022-10-17 16:21:11.239,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 48006)
+[2022-10-17 16:21:11.240,Pyro5.client,DEBUG] getting metadata for object buyer0
+[2022-10-17 16:21:11.240,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 52376)
+[2022-10-17 16:21:11.240,Pyro5.core,DEBUG] resolving PYRONAME:buyer0@localhost:9090
+[2022-10-17 16:21:11.240,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:21:11.240,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:21:11.241,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:21:11.241,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:21:11.242,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 33388) - unencrypted
+[2022-10-17 16:21:11.242,Pyro5.threadpoolserver,DEBUG] worker counts: 4 busy, 0 idle
+[2022-10-17 16:21:11.243,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:21:11.243,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:21:11.243,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:21:11.243,Pyro5.server,DEBUG] exception occurred in method call user code: client=('127.0.0.1', 33388) method=NameServer.lookup exception=NamingError('unknown name: buyer0')
+[2022-10-17 16:21:11.245,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 33388)
+[2022-10-17 16:21:11.245,Pyro5.client,ERROR] problem getting metadata: cannot connect
+[2022-10-17 16:21:11.246,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:21:11.246,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:21:11.246,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:21:13.235,Pyro5.server,DEBUG] daemon exits requestloop
+[2022-10-17 16:25:18.983,Pyro5,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2022-10-17 16:25:19.033,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.server.DaemonObject'>
+[2022-10-17 16:25:19.036,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.nameserver.NameServer'>
+[2022-10-17 16:25:19.042,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:25:19.042,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:25:19.043,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:25:19.043,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:25:19.043,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:25:19.043,Pyro5.client,ERROR] cannot connect to ('127.0.1.1', 9090): [Errno 111] Connection refused
+[2022-10-17 16:25:19.048,Pyro5.core,DEBUG] broadcast locate
+[2022-10-17 16:25:21.152,Pyro5.core,DEBUG] broadcast locate failed, try direct connection on NS_HOST
+[2022-10-17 16:25:21.152,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:25:21.152,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:25:21.153,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:25:21.154,Pyro5.naming,DEBUG] using volatile in-memory dict storage
+[2022-10-17 16:25:21.156,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:25:21.157,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:25:21.160,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:25:21.161,Pyro5.server,DEBUG] daemon created on localhost:9090 - IPv4 (pid 21647)
+[2022-10-17 16:25:21.161,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:25:21.162,Pyro5.naming,DEBUG] autoclean not enabled
+[2022-10-17 16:25:21.162,Pyro5.naming,INFO] nameserver daemon created
+[2022-10-17 16:25:21.162,Pyro5.naming,INFO] Not starting NS broadcast server because NS is bound to localhost
+[2022-10-17 16:25:21.163,Pyro5.server,INFO] daemon localhost:9090 entering requestloop
+[2022-10-17 16:25:21.163,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:25:23.157,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:25:23.158,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:25:23.160,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 39946) - unencrypted
+[2022-10-17 16:25:23.160,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:25:23.162,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:25:23.162,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:25:23.163,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:25:23.163,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:25:23.164,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:25:23.165,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 39948) - unencrypted
+[2022-10-17 16:25:23.165,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:25:23.167,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:25:23.167,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:25:23.168,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:25:23.168,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:25:23.169,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:25:23.170,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 39950) - unencrypted
+[2022-10-17 16:25:23.170,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:25:23.172,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:25:23.173,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:25:23.173,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:25:25.175,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:25:25.176,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:25:25.177,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:25:25.177,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:25:25.178,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:25:25.179,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:25:25.187,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:25:25.187,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:25:25.188,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:25:25.189,Pyro5.server,DEBUG] daemon created on localhost:41657 - IPv4 (pid 21647)
+[2022-10-17 16:25:25.190,Pyro5.server,DEBUG] daemon created on localhost:39671 - IPv4 (pid 21647)
+[2022-10-17 16:25:25.191,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:25:25.191,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:25:25.192,Pyro5.server,DEBUG] daemon created on localhost:39179 - IPv4 (pid 21647)
+[2022-10-17 16:25:25.195,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:25:25.200,Pyro5.server,INFO] daemon localhost:39671 entering requestloop
+[2022-10-17 16:25:25.201,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:25:25.202,Pyro5.server,INFO] daemon localhost:41657 entering requestloop
+[2022-10-17 16:25:25.205,Pyro5.server,INFO] daemon localhost:39179 entering requestloop
+[2022-10-17 16:25:25.208,Pyro5.client,DEBUG] getting metadata for object obj_d2b8a3f1b6684fafaec1bdb3528d7c39
+[2022-10-17 16:25:25.211,Pyro5.client,DEBUG] getting metadata for object obj_a2d05a94b19d44d7b781b0a174a0c6b1
+[2022-10-17 16:25:25.212,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:25:25.213,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:25:25.215,Pyro5.client,DEBUG] connecting to PYRO:obj_d2b8a3f1b6684fafaec1bdb3528d7c39@localhost:41657
+[2022-10-17 16:25:25.216,Pyro5.client,DEBUG] getting metadata for object obj_37522a1506ef4fd1a0ecd05521ae5507
+[2022-10-17 16:25:25.216,Pyro5.client,DEBUG] connecting to PYRO:obj_a2d05a94b19d44d7b781b0a174a0c6b1@localhost:39179
+[2022-10-17 16:25:25.218,Pyro5.client,DEBUG] connecting to PYRO:obj_37522a1506ef4fd1a0ecd05521ae5507@localhost:39671
+[2022-10-17 16:25:25.219,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 48312) - unencrypted
+[2022-10-17 16:25:25.219,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:25:25.221,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 55742) - unencrypted
+[2022-10-17 16:25:25.221,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:25:25.222,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:25:25.222,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 37686) - unencrypted
+[2022-10-17 16:25:25.224,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:25:25.224,Pyro5.client,DEBUG] connected to PYRO:obj_d2b8a3f1b6684fafaec1bdb3528d7c39@localhost:41657 - IPv4 - unencrypted
+[2022-10-17 16:25:25.225,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:25:25.225,Pyro5.client,DEBUG] connected to PYRO:obj_a2d05a94b19d44d7b781b0a174a0c6b1@localhost:39179 - IPv4 - unencrypted
+[2022-10-17 16:25:25.226,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:25:25.227,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 48312)
+[2022-10-17 16:25:25.227,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 55742)
+[2022-10-17 16:25:25.228,Pyro5.client,DEBUG] connected to PYRO:obj_37522a1506ef4fd1a0ecd05521ae5507@localhost:39671 - IPv4 - unencrypted
+[2022-10-17 16:25:25.228,Pyro5.client,DEBUG] getting metadata for object seller0
+[2022-10-17 16:25:25.228,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:25:25.228,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:25:25.229,Pyro5.core,DEBUG] resolving PYRONAME:seller0@localhost:9090
+[2022-10-17 16:25:25.229,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 37686)
+[2022-10-17 16:25:25.229,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:25:25.230,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:25:25.230,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:25:25.230,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 39954) - unencrypted
+[2022-10-17 16:25:25.230,Pyro5.threadpoolserver,DEBUG] worker counts: 4 busy, 0 idle
+[2022-10-17 16:25:25.231,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:25:25.231,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:25:25.231,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:25:25.232,Pyro5.server,DEBUG] exception occurred in method call user code: client=('127.0.0.1', 39954) method=NameServer.lookup exception=NamingError('unknown name: seller0')
+[2022-10-17 16:25:25.234,Pyro5.client,ERROR] problem getting metadata: cannot connect
+[2022-10-17 16:25:25.234,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 39954)
+[2022-10-17 16:25:25.234,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:25:25.234,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:25:25.234,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:25:27.223,Pyro5.server,DEBUG] daemon exits requestloop
+[2022-10-17 16:26:00.383,Pyro5,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2022-10-17 16:26:00.430,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.server.DaemonObject'>
+[2022-10-17 16:26:00.432,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.nameserver.NameServer'>
+[2022-10-17 16:26:00.436,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:26:00.436,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:26:00.436,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:26:00.437,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:26:00.437,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:26:00.437,Pyro5.client,ERROR] cannot connect to ('127.0.1.1', 9090): [Errno 111] Connection refused
+[2022-10-17 16:26:00.437,Pyro5.core,DEBUG] broadcast locate
+[2022-10-17 16:26:02.540,Pyro5.core,DEBUG] broadcast locate failed, try direct connection on NS_HOST
+[2022-10-17 16:26:02.541,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:26:02.541,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:26:02.542,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:26:02.543,Pyro5.naming,DEBUG] using volatile in-memory dict storage
+[2022-10-17 16:26:02.545,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:26:02.545,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:26:02.548,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:26:02.549,Pyro5.server,DEBUG] daemon created on localhost:9090 - IPv4 (pid 21755)
+[2022-10-17 16:26:02.550,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:26:02.550,Pyro5.naming,DEBUG] autoclean not enabled
+[2022-10-17 16:26:02.550,Pyro5.naming,INFO] nameserver daemon created
+[2022-10-17 16:26:02.551,Pyro5.naming,INFO] Not starting NS broadcast server because NS is bound to localhost
+[2022-10-17 16:26:02.551,Pyro5.server,INFO] daemon localhost:9090 entering requestloop
+[2022-10-17 16:26:02.551,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:26:04.546,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:26:04.547,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:26:04.548,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 48146) - unencrypted
+[2022-10-17 16:26:04.549,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:26:04.551,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:26:04.551,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:26:04.551,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:26:04.552,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:26:04.552,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:26:04.553,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 48150) - unencrypted
+[2022-10-17 16:26:04.553,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:26:04.555,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:26:04.555,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:26:04.555,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:26:04.556,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:26:04.556,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:26:04.557,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 48164) - unencrypted
+[2022-10-17 16:26:04.558,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:26:04.560,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:26:04.560,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:26:04.560,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:26:06.562,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:26:06.563,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:26:06.564,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:26:06.565,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:26:06.584,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:26:06.586,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:26:06.589,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:26:06.591,Pyro5.server,DEBUG] daemon created on localhost:37553 - IPv4 (pid 21755)
+[2022-10-17 16:26:06.592,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:26:06.597,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:26:06.597,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:26:06.599,Pyro5.server,INFO] daemon localhost:37553 entering requestloop
+[2022-10-17 16:26:06.599,Pyro5.server,DEBUG] daemon created on localhost:33075 - IPv4 (pid 21755)
+[2022-10-17 16:26:06.600,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:26:06.601,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:26:06.601,Pyro5.server,DEBUG] daemon created on localhost:46375 - IPv4 (pid 21755)
+[2022-10-17 16:26:06.604,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:26:06.608,Pyro5.server,INFO] daemon localhost:33075 entering requestloop
+[2022-10-17 16:26:06.609,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:26:06.609,Pyro5.server,INFO] daemon localhost:46375 entering requestloop
+[2022-10-17 16:26:06.612,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:26:06.616,Pyro5.client,DEBUG] getting metadata for object obj_4f83649dfa3b42adbe6e89a39c17d4a2
+[2022-10-17 16:26:06.617,Pyro5.client,DEBUG] connecting to PYRO:obj_4f83649dfa3b42adbe6e89a39c17d4a2@localhost:46375
+[2022-10-17 16:26:06.618,Pyro5.client,DEBUG] getting metadata for object obj_750b5ef6c0544db6a5329b2bdd8c6ed7
+[2022-10-17 16:26:06.618,Pyro5.client,DEBUG] connecting to PYRO:obj_750b5ef6c0544db6a5329b2bdd8c6ed7@localhost:33075
+[2022-10-17 16:26:06.619,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 60884) - unencrypted
+[2022-10-17 16:26:06.620,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:26:06.621,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 45654) - unencrypted
+[2022-10-17 16:26:06.623,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:26:06.627,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:26:06.628,Pyro5.client,DEBUG] connected to PYRO:obj_4f83649dfa3b42adbe6e89a39c17d4a2@localhost:46375 - IPv4 - unencrypted
+[2022-10-17 16:26:06.629,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:26:06.630,Pyro5.client,DEBUG] connected to PYRO:obj_750b5ef6c0544db6a5329b2bdd8c6ed7@localhost:33075 - IPv4 - unencrypted
+[2022-10-17 16:26:06.630,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 60884)
+[2022-10-17 16:26:06.631,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 45654)
+[2022-10-17 16:26:06.631,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:26:06.632,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:27:56.505,Pyro5,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2022-10-17 16:27:56.551,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.server.DaemonObject'>
+[2022-10-17 16:27:56.554,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.nameserver.NameServer'>
+[2022-10-17 16:27:56.558,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:27:56.558,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:27:56.558,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:27:56.558,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:27:56.558,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:27:56.559,Pyro5.client,ERROR] cannot connect to ('127.0.1.1', 9090): [Errno 111] Connection refused
+[2022-10-17 16:27:56.559,Pyro5.core,DEBUG] broadcast locate
+[2022-10-17 16:27:58.662,Pyro5.core,DEBUG] broadcast locate failed, try direct connection on NS_HOST
+[2022-10-17 16:27:58.663,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:27:58.663,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:27:58.664,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:27:58.665,Pyro5.naming,DEBUG] using volatile in-memory dict storage
+[2022-10-17 16:27:58.668,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:27:58.668,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:27:58.671,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:27:58.672,Pyro5.server,DEBUG] daemon created on localhost:9090 - IPv4 (pid 21958)
+[2022-10-17 16:27:58.673,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:27:58.673,Pyro5.naming,DEBUG] autoclean not enabled
+[2022-10-17 16:27:58.673,Pyro5.naming,INFO] nameserver daemon created
+[2022-10-17 16:27:58.674,Pyro5.naming,INFO] Not starting NS broadcast server because NS is bound to localhost
+[2022-10-17 16:27:58.674,Pyro5.server,INFO] daemon localhost:9090 entering requestloop
+[2022-10-17 16:27:58.674,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:28:00.669,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:28:00.669,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:28:00.671,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 54872) - unencrypted
+[2022-10-17 16:28:00.671,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:28:00.673,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:28:00.674,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:28:00.674,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:28:00.675,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:28:00.675,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:28:00.676,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 54884) - unencrypted
+[2022-10-17 16:28:00.677,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:28:00.678,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:28:00.678,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:28:00.679,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:28:00.679,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:28:00.679,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:28:00.681,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 54888) - unencrypted
+[2022-10-17 16:28:00.681,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:28:00.682,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:28:00.683,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:28:00.683,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:28:02.685,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:28:02.685,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:28:02.687,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:28:02.687,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:28:02.688,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:28:02.689,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:28:02.695,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:28:02.696,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:28:02.697,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:28:02.698,Pyro5.server,DEBUG] daemon created on localhost:44125 - IPv4 (pid 21958)
+[2022-10-17 16:28:02.699,Pyro5.server,DEBUG] daemon created on localhost:35223 - IPv4 (pid 21958)
+[2022-10-17 16:28:02.699,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:28:02.700,Pyro5.server,DEBUG] daemon created on localhost:37349 - IPv4 (pid 21958)
+[2022-10-17 16:28:02.700,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:28:02.701,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:28:02.706,Pyro5.server,INFO] daemon localhost:44125 entering requestloop
+[2022-10-17 16:28:02.707,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:28:02.710,Pyro5.server,INFO] daemon localhost:37349 entering requestloop
+[2022-10-17 16:28:02.711,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:28:02.713,Pyro5.server,INFO] daemon localhost:35223 entering requestloop
+[2022-10-17 16:28:02.715,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:28:02.718,Pyro5.client,DEBUG] getting metadata for object obj_2b9f6b6a66d54921947997a0c439415b
+[2022-10-17 16:28:02.719,Pyro5.client,DEBUG] connecting to PYRO:obj_2b9f6b6a66d54921947997a0c439415b@localhost:37349
+[2022-10-17 16:28:02.725,Pyro5.client,DEBUG] getting metadata for object obj_f75f326ef499488d85bfb34e32b26898
+[2022-10-17 16:28:02.726,Pyro5.client,DEBUG] connecting to PYRO:obj_f75f326ef499488d85bfb34e32b26898@localhost:44125
+[2022-10-17 16:28:02.727,Pyro5.client,DEBUG] getting metadata for object obj_2b9f6b6a66d54921947997a0c439415b
+[2022-10-17 16:28:02.727,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 37096) - unencrypted
+[2022-10-17 16:28:02.728,Pyro5.client,DEBUG] connecting to PYRO:obj_2b9f6b6a66d54921947997a0c439415b@localhost:37349
+[2022-10-17 16:28:02.729,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:28:02.730,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 45914) - unencrypted
+[2022-10-17 16:28:02.732,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:28:02.733,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:28:02.734,Pyro5.client,DEBUG] connected to PYRO:obj_2b9f6b6a66d54921947997a0c439415b@localhost:37349 - IPv4 - unencrypted
+[2022-10-17 16:28:02.734,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 37104) - unencrypted
+[2022-10-17 16:28:02.736,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:28:02.736,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:28:02.737,Pyro5.client,DEBUG] connected to PYRO:obj_f75f326ef499488d85bfb34e32b26898@localhost:44125 - IPv4 - unencrypted
+[2022-10-17 16:28:02.738,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 37096)
+[2022-10-17 16:28:02.738,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 45914)
+[2022-10-17 16:28:02.739,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:28:02.739,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:28:02.740,Pyro5.client,DEBUG] connected to PYRO:obj_2b9f6b6a66d54921947997a0c439415b@localhost:37349 - IPv4 - unencrypted
+[2022-10-17 16:28:02.740,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:28:02.741,Pyro5.client,DEBUG] getting metadata for object seller2
+[2022-10-17 16:28:02.742,Pyro5.core,DEBUG] resolving PYRONAME:seller2@localhost:9090
+[2022-10-17 16:28:02.742,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:28:02.742,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 37104)
+[2022-10-17 16:28:02.742,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:28:02.743,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:28:02.743,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 54900) - unencrypted
+[2022-10-17 16:28:02.744,Pyro5.threadpoolserver,DEBUG] worker counts: 4 busy, 0 idle
+[2022-10-17 16:28:02.745,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:28:02.745,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:28:02.745,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:28:02.746,Pyro5.server,DEBUG] exception occurred in method call user code: client=('127.0.0.1', 54900) method=NameServer.lookup exception=NamingError('unknown name: seller2')
+[2022-10-17 16:28:02.749,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 54900)
+[2022-10-17 16:28:02.749,Pyro5.client,ERROR] problem getting metadata: cannot connect
+[2022-10-17 16:28:02.750,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:28:02.750,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:28:02.751,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:29:35.333,Pyro5,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2022-10-17 16:29:35.380,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.server.DaemonObject'>
+[2022-10-17 16:29:35.383,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.nameserver.NameServer'>
+[2022-10-17 16:29:35.386,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:35.387,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:35.387,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:29:35.387,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:29:35.387,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:29:35.387,Pyro5.client,ERROR] cannot connect to ('127.0.1.1', 9090): [Errno 111] Connection refused
+[2022-10-17 16:29:35.387,Pyro5.core,DEBUG] broadcast locate
+[2022-10-17 16:29:37.491,Pyro5.core,DEBUG] broadcast locate failed, try direct connection on NS_HOST
+[2022-10-17 16:29:37.491,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:37.491,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:37.492,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:29:37.492,Pyro5.naming,DEBUG] using volatile in-memory dict storage
+[2022-10-17 16:29:37.494,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:29:37.494,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:29:37.495,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:29:37.496,Pyro5.server,DEBUG] daemon created on localhost:9090 - IPv4 (pid 22169)
+[2022-10-17 16:29:37.496,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:29:37.496,Pyro5.naming,DEBUG] autoclean not enabled
+[2022-10-17 16:29:37.496,Pyro5.naming,INFO] nameserver daemon created
+[2022-10-17 16:29:37.496,Pyro5.naming,INFO] Not starting NS broadcast server because NS is bound to localhost
+[2022-10-17 16:29:37.496,Pyro5.server,INFO] daemon localhost:9090 entering requestloop
+[2022-10-17 16:29:37.496,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:29:39.494,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:39.495,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:39.496,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 49516) - unencrypted
+[2022-10-17 16:29:39.497,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:29:39.499,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:29:39.499,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:29:39.499,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:29:39.500,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:39.500,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:39.502,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 49524) - unencrypted
+[2022-10-17 16:29:39.503,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:29:39.504,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:29:39.505,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:29:39.505,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:29:39.506,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:39.506,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:39.507,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 49528) - unencrypted
+[2022-10-17 16:29:39.508,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:29:39.509,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:29:39.510,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:29:39.510,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:29:41.514,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:29:41.514,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:29:41.515,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:29:41.516,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:29:41.516,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:29:41.517,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:29:41.524,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:29:41.524,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:29:41.525,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:29:41.526,Pyro5.server,DEBUG] daemon created on localhost:46243 - IPv4 (pid 22169)
+[2022-10-17 16:29:41.527,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:29:41.528,Pyro5.server,DEBUG] daemon created on localhost:37867 - IPv4 (pid 22169)
+[2022-10-17 16:29:41.529,Pyro5.server,DEBUG] daemon created on localhost:41815 - IPv4 (pid 22169)
+[2022-10-17 16:29:41.530,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:29:41.531,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:29:41.534,Pyro5.server,INFO] daemon localhost:46243 entering requestloop
+[2022-10-17 16:29:41.535,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:29:41.539,Pyro5.server,INFO] daemon localhost:37867 entering requestloop
+[2022-10-17 16:29:41.541,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:29:41.545,Pyro5.client,DEBUG] getting metadata for object obj_dc4474bf4c644e5a8b0600b7654d1226
+[2022-10-17 16:29:41.548,Pyro5.client,DEBUG] connecting to PYRO:obj_dc4474bf4c644e5a8b0600b7654d1226@localhost:37867
+[2022-10-17 16:29:41.551,Pyro5.server,INFO] daemon localhost:41815 entering requestloop
+[2022-10-17 16:29:41.552,Pyro5.client,DEBUG] getting metadata for object obj_8506b7a4515e44ebbcf87c143237c81a
+[2022-10-17 16:29:41.553,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 49812) - unencrypted
+[2022-10-17 16:29:41.553,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:29:41.555,Pyro5.client,DEBUG] connecting to PYRO:obj_8506b7a4515e44ebbcf87c143237c81a@localhost:41815
+[2022-10-17 16:29:41.556,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:29:41.558,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:29:41.561,Pyro5.client,DEBUG] getting metadata for object obj_dc4474bf4c644e5a8b0600b7654d1226
+[2022-10-17 16:29:41.562,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 45278) - unencrypted
+[2022-10-17 16:29:41.563,Pyro5.client,DEBUG] connected to PYRO:obj_dc4474bf4c644e5a8b0600b7654d1226@localhost:37867 - IPv4 - unencrypted
+[2022-10-17 16:29:41.563,Pyro5.client,DEBUG] connecting to PYRO:obj_dc4474bf4c644e5a8b0600b7654d1226@localhost:37867
+[2022-10-17 16:29:41.563,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:29:41.565,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 49812)
+[2022-10-17 16:29:41.566,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:29:41.567,Pyro5.client,DEBUG] connected to PYRO:obj_8506b7a4515e44ebbcf87c143237c81a@localhost:41815 - IPv4 - unencrypted
+[2022-10-17 16:29:41.567,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 49826) - unencrypted
+[2022-10-17 16:29:41.568,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:29:41.568,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:29:41.568,Pyro5.client,DEBUG] getting metadata for object buyer2
+[2022-10-17 16:29:41.568,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 45278)
+[2022-10-17 16:29:41.569,Pyro5.core,DEBUG] resolving PYRONAME:buyer2@localhost:9090
+[2022-10-17 16:29:41.570,Pyro5.client,DEBUG] getting metadata for object buyer1
+[2022-10-17 16:29:41.570,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:29:41.570,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:41.570,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:29:41.571,Pyro5.core,DEBUG] resolving PYRONAME:buyer1@localhost:9090
+[2022-10-17 16:29:41.571,Pyro5.client,DEBUG] connected to PYRO:obj_dc4474bf4c644e5a8b0600b7654d1226@localhost:37867 - IPv4 - unencrypted
+[2022-10-17 16:29:41.571,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:41.571,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:41.573,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:41.573,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 59014) - unencrypted
+[2022-10-17 16:29:41.573,Pyro5.threadpoolserver,DEBUG] worker counts: 4 busy, 0 idle
+[2022-10-17 16:29:41.572,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 49826)
+[2022-10-17 16:29:41.574,Pyro5.client,DEBUG] getting metadata for object buyer2
+[2022-10-17 16:29:41.574,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 59020) - unencrypted
+[2022-10-17 16:29:41.575,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:29:41.575,Pyro5.core,DEBUG] resolving PYRONAME:buyer2@localhost:9090
+[2022-10-17 16:29:41.575,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:29:41.576,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:29:41.576,Pyro5.threadpoolserver,DEBUG] worker counts: 5 busy, 0 idle
+[2022-10-17 16:29:41.576,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:41.577,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:29:41.577,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:29:41.577,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:29:41.577,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:29:41.578,Pyro5.server,DEBUG] exception occurred in method call user code: client=('127.0.0.1', 59014) method=NameServer.lookup exception=NamingError('unknown name: buyer2')
+[2022-10-17 16:29:41.578,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:29:41.579,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 59026) - unencrypted
+[2022-10-17 16:29:41.580,Pyro5.threadpoolserver,DEBUG] worker counts: 6 busy, 0 idle
+[2022-10-17 16:29:41.581,Pyro5.server,DEBUG] exception occurred in method call user code: client=('127.0.0.1', 59020) method=NameServer.lookup exception=NamingError('unknown name: buyer1')
+[2022-10-17 16:29:41.582,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:29:41.582,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:29:41.582,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:29:41.583,Pyro5.server,DEBUG] exception occurred in method call user code: client=('127.0.0.1', 59026) method=NameServer.lookup exception=NamingError('unknown name: buyer2')
+[2022-10-17 16:29:41.584,Pyro5.client,ERROR] problem getting metadata: cannot connect
+[2022-10-17 16:29:41.584,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:29:41.584,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 59020)
+[2022-10-17 16:29:41.585,Pyro5.threadpoolserver,DEBUG] worker counts: 5 busy, 1 idle
+[2022-10-17 16:29:41.585,Pyro5.client,ERROR] problem getting metadata: cannot connect
+[2022-10-17 16:29:41.585,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 59014)
+[2022-10-17 16:29:41.586,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 59026)
+[2022-10-17 16:29:41.586,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:29:41.586,Pyro5.client,ERROR] problem getting metadata: cannot connect
+[2022-10-17 16:29:41.586,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:29:41.586,Pyro5.threadpoolserver,DEBUG] worker counts: 4 busy, 2 idle
+[2022-10-17 16:29:41.586,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 3 idle
+[2022-10-17 16:29:41.586,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:29:41.586,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:29:41.587,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:30:32.479,Pyro5,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2022-10-17 16:30:32.525,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.server.DaemonObject'>
+[2022-10-17 16:30:32.528,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.nameserver.NameServer'>
+[2022-10-17 16:30:32.531,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:30:32.532,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:30:32.532,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:30:32.532,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:30:32.532,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:30:32.532,Pyro5.client,ERROR] cannot connect to ('127.0.1.1', 9090): [Errno 111] Connection refused
+[2022-10-17 16:30:32.533,Pyro5.core,DEBUG] broadcast locate
+[2022-10-17 16:30:34.636,Pyro5.core,DEBUG] broadcast locate failed, try direct connection on NS_HOST
+[2022-10-17 16:30:34.637,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:30:34.637,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:30:34.638,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:30:34.639,Pyro5.naming,DEBUG] using volatile in-memory dict storage
+[2022-10-17 16:30:34.641,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:30:34.641,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:30:34.644,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:30:34.645,Pyro5.server,DEBUG] daemon created on localhost:9090 - IPv4 (pid 22304)
+[2022-10-17 16:30:34.646,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:30:34.646,Pyro5.naming,DEBUG] autoclean not enabled
+[2022-10-17 16:30:34.646,Pyro5.naming,INFO] nameserver daemon created
+[2022-10-17 16:30:34.647,Pyro5.naming,INFO] Not starting NS broadcast server because NS is bound to localhost
+[2022-10-17 16:30:34.647,Pyro5.server,INFO] daemon localhost:9090 entering requestloop
+[2022-10-17 16:30:34.647,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:30:36.642,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:30:36.643,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:30:36.645,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 34682) - unencrypted
+[2022-10-17 16:30:36.645,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:30:36.647,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:30:36.647,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:30:36.648,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:30:36.648,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:30:36.649,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:30:36.650,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 34684) - unencrypted
+[2022-10-17 16:30:36.651,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:30:36.652,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:30:36.652,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:30:36.653,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:30:36.653,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:30:36.653,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:30:36.655,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 34700) - unencrypted
+[2022-10-17 16:30:36.655,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:30:36.657,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:30:36.657,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:30:36.658,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:30:38.660,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:30:38.661,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:30:38.662,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:30:38.662,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:30:38.664,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:30:38.664,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:30:38.668,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:30:38.672,Pyro5.server,DEBUG] daemon created on localhost:37713 - IPv4 (pid 22304)
+[2022-10-17 16:30:38.673,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:30:38.677,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:30:38.678,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:30:38.678,Pyro5.server,DEBUG] daemon created on localhost:35599 - IPv4 (pid 22304)
+[2022-10-17 16:30:38.680,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:30:38.681,Pyro5.server,DEBUG] daemon created on localhost:46499 - IPv4 (pid 22304)
+[2022-10-17 16:30:38.682,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:30:38.685,Pyro5.server,INFO] daemon localhost:37713 entering requestloop
+[2022-10-17 16:30:38.686,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:30:38.692,Pyro5.server,INFO] daemon localhost:35599 entering requestloop
+[2022-10-17 16:30:38.693,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:30:38.694,Pyro5.server,INFO] daemon localhost:46499 entering requestloop
+[2022-10-17 16:30:38.695,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:30:38.698,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:30:38.700,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:30:38.701,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:30:38.703,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:30:38.703,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:30:38.705,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:30:40.693,Pyro5.server,DEBUG] daemon exits requestloop
+[2022-10-17 16:30:40.694,Pyro5.server,DEBUG] daemon exits requestloop
+[2022-10-17 16:30:40.701,Pyro5.server,DEBUG] daemon exits requestloop
+[2022-10-17 16:31:19.439,Pyro5,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2022-10-17 16:31:19.487,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.server.DaemonObject'>
+[2022-10-17 16:31:19.490,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.nameserver.NameServer'>
+[2022-10-17 16:31:19.494,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:31:19.494,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:31:19.494,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:31:19.494,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:31:19.495,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:31:19.495,Pyro5.client,ERROR] cannot connect to ('127.0.1.1', 9090): [Errno 111] Connection refused
+[2022-10-17 16:31:19.495,Pyro5.core,DEBUG] broadcast locate
+[2022-10-17 16:31:21.598,Pyro5.core,DEBUG] broadcast locate failed, try direct connection on NS_HOST
+[2022-10-17 16:31:21.598,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:31:21.599,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:31:21.600,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:31:21.601,Pyro5.naming,DEBUG] using volatile in-memory dict storage
+[2022-10-17 16:31:21.603,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:31:21.603,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:31:21.606,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:31:21.607,Pyro5.server,DEBUG] daemon created on localhost:9090 - IPv4 (pid 22408)
+[2022-10-17 16:31:21.607,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:31:21.607,Pyro5.naming,DEBUG] autoclean not enabled
+[2022-10-17 16:31:21.608,Pyro5.naming,INFO] nameserver daemon created
+[2022-10-17 16:31:21.608,Pyro5.naming,INFO] Not starting NS broadcast server because NS is bound to localhost
+[2022-10-17 16:31:21.608,Pyro5.server,INFO] daemon localhost:9090 entering requestloop
+[2022-10-17 16:31:21.608,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:31:23.602,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:31:23.603,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:31:23.604,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 51666) - unencrypted
+[2022-10-17 16:31:23.605,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:31:23.607,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:31:23.607,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:31:23.607,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:31:23.608,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:31:23.608,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:31:23.609,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 51682) - unencrypted
+[2022-10-17 16:31:23.610,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:31:23.611,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:31:23.612,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:31:23.612,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:31:23.612,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:31:23.613,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:31:23.614,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 51692) - unencrypted
+[2022-10-17 16:31:23.615,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:31:23.616,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:31:23.617,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:31:23.617,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:31:25.621,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:31:25.621,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:31:25.622,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:31:25.622,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:31:25.624,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:31:25.624,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:31:25.626,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:31:25.626,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:31:25.626,Pyro5.server,DEBUG] daemon created on localhost:34399 - IPv4 (pid 22408)
+[2022-10-17 16:31:25.627,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:31:25.627,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:31:25.628,Pyro5.server,DEBUG] daemon created on localhost:38797 - IPv4 (pid 22408)
+[2022-10-17 16:31:25.628,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:31:25.628,Pyro5.server,DEBUG] daemon created on localhost:45421 - IPv4 (pid 22408)
+[2022-10-17 16:31:25.629,Pyro5.server,INFO] daemon localhost:34399 entering requestloop
+[2022-10-17 16:31:25.629,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:31:25.629,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:31:25.631,Pyro5.server,INFO] daemon localhost:45421 entering requestloop
+[2022-10-17 16:31:25.632,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:31:25.632,Pyro5.server,INFO] daemon localhost:38797 entering requestloop
+[2022-10-17 16:31:25.632,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:31:25.635,Pyro5.client,DEBUG] getting metadata for object obj_ee6cd743915a4354894254028417575b
+[2022-10-17 16:31:25.636,Pyro5.client,DEBUG] connecting to PYRO:obj_ee6cd743915a4354894254028417575b@localhost:34399
+[2022-10-17 16:31:25.636,Pyro5.client,DEBUG] getting metadata for object obj_85a9a19979b34e939831cafc0f2da4aa
+[2022-10-17 16:31:25.636,Pyro5.client,DEBUG] connecting to PYRO:obj_85a9a19979b34e939831cafc0f2da4aa@localhost:45421
+[2022-10-17 16:31:25.637,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 50674) - unencrypted
+[2022-10-17 16:31:25.637,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:31:25.637,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 57630) - unencrypted
+[2022-10-17 16:31:25.637,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:31:25.638,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:31:25.639,Pyro5.client,DEBUG] connected to PYRO:obj_ee6cd743915a4354894254028417575b@localhost:34399 - IPv4 - unencrypted
+[2022-10-17 16:31:25.639,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:31:25.640,Pyro5.client,DEBUG] connected to PYRO:obj_85a9a19979b34e939831cafc0f2da4aa@localhost:45421 - IPv4 - unencrypted
+[2022-10-17 16:31:25.640,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 50674)
+[2022-10-17 16:31:25.640,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 57630)
+[2022-10-17 16:31:25.640,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:31:25.641,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:34:42.734,Pyro5,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2022-10-17 16:34:42.784,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.server.DaemonObject'>
+[2022-10-17 16:34:42.788,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.nameserver.NameServer'>
+[2022-10-17 16:34:42.792,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:34:42.792,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:34:42.793,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:34:42.793,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:34:42.793,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:34:42.793,Pyro5.client,ERROR] cannot connect to ('127.0.1.1', 9090): [Errno 111] Connection refused
+[2022-10-17 16:34:42.793,Pyro5.core,DEBUG] broadcast locate
+[2022-10-17 16:34:44.897,Pyro5.core,DEBUG] broadcast locate failed, try direct connection on NS_HOST
+[2022-10-17 16:34:44.897,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:34:44.897,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:34:44.897,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:34:44.898,Pyro5.naming,DEBUG] using volatile in-memory dict storage
+[2022-10-17 16:34:44.898,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:34:44.899,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:34:44.900,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:34:44.900,Pyro5.server,DEBUG] daemon created on localhost:9090 - IPv4 (pid 22712)
+[2022-10-17 16:34:44.901,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:34:44.901,Pyro5.naming,DEBUG] autoclean not enabled
+[2022-10-17 16:34:44.901,Pyro5.naming,INFO] nameserver daemon created
+[2022-10-17 16:34:44.901,Pyro5.naming,INFO] Not starting NS broadcast server because NS is bound to localhost
+[2022-10-17 16:34:44.901,Pyro5.server,INFO] daemon localhost:9090 entering requestloop
+[2022-10-17 16:34:44.901,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:34:46.901,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:34:46.901,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:34:46.903,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 58346) - unencrypted
+[2022-10-17 16:34:46.903,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:34:46.905,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:34:46.906,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:34:46.906,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:34:46.907,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:34:46.907,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:34:46.908,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 58362) - unencrypted
+[2022-10-17 16:34:46.909,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:34:46.910,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:34:46.911,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:34:46.911,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:34:46.912,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:34:46.912,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:34:46.913,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 58378) - unencrypted
+[2022-10-17 16:34:46.913,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:34:46.915,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:34:46.915,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:34:46.915,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:34:48.919,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:34:48.919,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:34:48.920,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:34:48.920,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:34:48.921,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:34:48.924,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:34:48.930,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:34:48.930,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:34:48.931,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:34:48.932,Pyro5.server,DEBUG] daemon created on localhost:46551 - IPv4 (pid 22712)
+[2022-10-17 16:34:48.933,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:34:48.933,Pyro5.server,DEBUG] daemon created on localhost:44917 - IPv4 (pid 22712)
+[2022-10-17 16:34:48.935,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:34:48.935,Pyro5.server,DEBUG] daemon created on localhost:33071 - IPv4 (pid 22712)
+[2022-10-17 16:34:48.940,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:34:48.941,Pyro5.server,INFO] daemon localhost:46551 entering requestloop
+[2022-10-17 16:34:48.942,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:34:48.943,Pyro5.server,INFO] daemon localhost:44917 entering requestloop
+[2022-10-17 16:34:48.947,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:34:48.950,Pyro5.server,INFO] daemon localhost:33071 entering requestloop
+[2022-10-17 16:34:48.951,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:34:48.954,Pyro5.client,DEBUG] getting metadata for object obj_8462ef8196cb47a39cd0f2beb16236f3
+[2022-10-17 16:34:48.955,Pyro5.client,DEBUG] connecting to PYRO:obj_8462ef8196cb47a39cd0f2beb16236f3@localhost:33071
+[2022-10-17 16:34:48.958,Pyro5.client,DEBUG] getting metadata for object obj_eb654ed8f8a5439b9b1e073bab9b70be
+[2022-10-17 16:34:48.959,Pyro5.client,DEBUG] connecting to PYRO:obj_eb654ed8f8a5439b9b1e073bab9b70be@localhost:46551
+[2022-10-17 16:34:48.961,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 33396) - unencrypted
+[2022-10-17 16:34:48.962,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:34:48.963,Pyro5.client,DEBUG] getting metadata for object obj_d9556accaec341a38b041a2ceda131ce
+[2022-10-17 16:34:48.964,Pyro5.client,DEBUG] connecting to PYRO:obj_d9556accaec341a38b041a2ceda131ce@localhost:44917
+[2022-10-17 16:34:48.965,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:34:48.967,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 40704) - unencrypted
+[2022-10-17 16:34:48.967,Pyro5.client,DEBUG] connected to PYRO:obj_8462ef8196cb47a39cd0f2beb16236f3@localhost:33071 - IPv4 - unencrypted
+[2022-10-17 16:34:48.968,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:34:48.970,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 34914) - unencrypted
+[2022-10-17 16:34:48.971,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 33396)
+[2022-10-17 16:34:48.972,Pyro5.client,DEBUG] getting metadata for object seller2
+[2022-10-17 16:34:48.975,Pyro5.core,DEBUG] resolving PYRONAME:seller2@localhost:9090
+[2022-10-17 16:34:48.973,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:34:48.974,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:34:48.975,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:34:48.972,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:34:48.976,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:34:48.977,Pyro5.client,DEBUG] connected to PYRO:obj_d9556accaec341a38b041a2ceda131ce@localhost:44917 - IPv4 - unencrypted
+[2022-10-17 16:34:48.977,Pyro5.client,DEBUG] connected to PYRO:obj_eb654ed8f8a5439b9b1e073bab9b70be@localhost:46551 - IPv4 - unencrypted
+[2022-10-17 16:34:48.978,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:34:48.980,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 34914)
+[2022-10-17 16:34:48.981,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 40704)
+[2022-10-17 16:34:48.983,Pyro5.client,DEBUG] getting metadata for object buyer1
+[2022-10-17 16:34:48.984,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 58390) - unencrypted
+[2022-10-17 16:34:48.984,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:34:48.985,Pyro5.core,DEBUG] resolving PYRONAME:buyer1@localhost:9090
+[2022-10-17 16:34:48.985,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:34:48.985,Pyro5.threadpoolserver,DEBUG] worker counts: 4 busy, 0 idle
+[2022-10-17 16:34:48.986,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:34:48.986,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:34:48.987,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 58394) - unencrypted
+[2022-10-17 16:34:48.988,Pyro5.threadpoolserver,DEBUG] worker counts: 5 busy, 0 idle
+[2022-10-17 16:34:48.993,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:34:48.993,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:34:48.994,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:34:48.994,Pyro5.server,DEBUG] exception occurred in method call user code: client=('127.0.0.1', 58390) method=NameServer.lookup exception=NamingError('unknown name: seller2')
+[2022-10-17 16:34:48.998,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:34:48.998,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:34:48.999,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:34:49.002,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 58390)
+[2022-10-17 16:34:49.002,Pyro5.client,ERROR] problem getting metadata: cannot connect
+[2022-10-17 16:34:49.002,Pyro5.threadpoolserver,DEBUG] worker counts: 4 busy, 1 idle
+[2022-10-17 16:34:49.002,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:34:49.003,Pyro5.server,DEBUG] exception occurred in method call user code: client=('127.0.0.1', 58394) method=NameServer.lookup exception=NamingError('unknown name: buyer1')
+[2022-10-17 16:34:49.003,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:34:49.005,Pyro5.client,ERROR] problem getting metadata: cannot connect
+[2022-10-17 16:34:49.005,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 58394)
+[2022-10-17 16:34:49.009,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:34:49.009,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 2 idle
+[2022-10-17 16:34:49.009,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:34:50.973,Pyro5.server,DEBUG] daemon exits requestloop
+[2022-10-17 16:34:50.978,Pyro5.server,DEBUG] daemon exits requestloop
+[2022-10-17 16:39:16.178,Pyro5,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2022-10-17 16:39:16.224,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.server.DaemonObject'>
+[2022-10-17 16:39:16.227,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.nameserver.NameServer'>
+[2022-10-17 16:39:16.230,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:39:16.231,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:39:16.231,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:39:16.231,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:39:16.231,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:39:16.231,Pyro5.client,ERROR] cannot connect to ('127.0.1.1', 9090): [Errno 111] Connection refused
+[2022-10-17 16:39:16.231,Pyro5.core,DEBUG] broadcast locate
+[2022-10-17 16:39:18.335,Pyro5.core,DEBUG] broadcast locate failed, try direct connection on NS_HOST
+[2022-10-17 16:39:18.336,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:39:18.336,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:39:18.337,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:39:18.339,Pyro5.naming,DEBUG] using volatile in-memory dict storage
+[2022-10-17 16:39:18.341,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:39:18.341,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:39:18.345,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:39:18.346,Pyro5.server,DEBUG] daemon created on localhost:9090 - IPv4 (pid 23184)
+[2022-10-17 16:39:18.346,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:39:18.346,Pyro5.naming,DEBUG] autoclean not enabled
+[2022-10-17 16:39:18.347,Pyro5.naming,INFO] nameserver daemon created
+[2022-10-17 16:39:18.347,Pyro5.naming,INFO] Not starting NS broadcast server because NS is bound to localhost
+[2022-10-17 16:39:18.347,Pyro5.server,INFO] daemon localhost:9090 entering requestloop
+[2022-10-17 16:39:18.347,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:39:20.342,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:39:20.342,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:39:20.344,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 43532) - unencrypted
+[2022-10-17 16:39:20.344,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:39:20.346,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:39:20.347,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:39:20.347,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:39:20.348,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:39:20.348,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:39:20.349,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 43540) - unencrypted
+[2022-10-17 16:39:20.349,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:39:20.351,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:39:20.352,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:39:20.352,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:39:20.352,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:39:20.353,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:39:20.354,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 43550) - unencrypted
+[2022-10-17 16:39:20.354,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:39:20.356,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:39:20.356,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:39:20.356,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:39:22.359,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:39:22.359,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:39:22.360,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:39:22.362,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:39:22.362,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:39:22.362,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:39:22.369,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:39:22.369,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:39:22.371,Pyro5.server,DEBUG] daemon created on localhost:38649 - IPv4 (pid 23184)
+[2022-10-17 16:39:22.372,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:39:22.372,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:39:22.373,Pyro5.server,DEBUG] daemon created on localhost:34649 - IPv4 (pid 23184)
+[2022-10-17 16:39:22.375,Pyro5.server,DEBUG] daemon created on localhost:36879 - IPv4 (pid 23184)
+[2022-10-17 16:39:22.376,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:39:22.377,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:39:22.378,Pyro5.server,INFO] daemon localhost:38649 entering requestloop
+[2022-10-17 16:39:22.383,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:39:22.387,Pyro5.server,INFO] daemon localhost:34649 entering requestloop
+[2022-10-17 16:39:22.387,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:39:22.389,Pyro5.server,INFO] daemon localhost:36879 entering requestloop
+[2022-10-17 16:39:22.390,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:39:22.390,Pyro5.client,DEBUG] getting metadata for object obj_e1fa2a08b552490aab985149a0a265a5
+[2022-10-17 16:39:22.392,Pyro5.client,DEBUG] connecting to PYRO:obj_e1fa2a08b552490aab985149a0a265a5@localhost:34649
+[2022-10-17 16:39:22.397,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 60688) - unencrypted
+[2022-10-17 16:39:22.398,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:39:22.400,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:39:22.401,Pyro5.client,DEBUG] connected to PYRO:obj_e1fa2a08b552490aab985149a0a265a5@localhost:34649 - IPv4 - unencrypted
+[2022-10-17 16:39:22.403,Pyro5.client,DEBUG] getting metadata for object obj_9f0605f4927a48079994e881da1ed22f
+[2022-10-17 16:39:22.404,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 60688)
+[2022-10-17 16:39:22.404,Pyro5.client,DEBUG] getting metadata for object obj_e1fa2a08b552490aab985149a0a265a5
+[2022-10-17 16:39:22.404,Pyro5.client,DEBUG] connecting to PYRO:obj_9f0605f4927a48079994e881da1ed22f@localhost:38649
+[2022-10-17 16:39:22.405,Pyro5.client,DEBUG] getting metadata for object obj_9f0605f4927a48079994e881da1ed22f
+[2022-10-17 16:39:22.405,Pyro5.client,DEBUG] connecting to PYRO:obj_e1fa2a08b552490aab985149a0a265a5@localhost:34649
+[2022-10-17 16:39:22.405,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:39:22.405,Pyro5.client,DEBUG] connecting to PYRO:obj_9f0605f4927a48079994e881da1ed22f@localhost:38649
+[2022-10-17 16:39:22.406,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 52608) - unencrypted
+[2022-10-17 16:39:22.407,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 60690) - unencrypted
+[2022-10-17 16:39:22.407,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:39:22.407,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:39:22.408,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 52610) - unencrypted
+[2022-10-17 16:39:22.409,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:39:22.409,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:39:22.410,Pyro5.client,DEBUG] connected to PYRO:obj_9f0605f4927a48079994e881da1ed22f@localhost:38649 - IPv4 - unencrypted
+[2022-10-17 16:39:22.410,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:39:22.410,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:39:22.411,Pyro5.client,DEBUG] connected to PYRO:obj_9f0605f4927a48079994e881da1ed22f@localhost:38649 - IPv4 - unencrypted
+[2022-10-17 16:39:22.411,Pyro5.client,DEBUG] connected to PYRO:obj_e1fa2a08b552490aab985149a0a265a5@localhost:34649 - IPv4 - unencrypted
+[2022-10-17 16:39:22.411,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 52608)
+[2022-10-17 16:39:22.412,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 52610)
+[2022-10-17 16:39:22.413,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:39:22.413,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:39:22.413,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 60690)
+[2022-10-17 16:39:22.413,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:39:22.413,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:39:22.414,Pyro5.client,DEBUG] getting metadata for object obj_9f0605f4927a48079994e881da1ed22f
+[2022-10-17 16:39:22.414,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:39:22.414,Pyro5.client,DEBUG] connecting to PYRO:obj_9f0605f4927a48079994e881da1ed22f@localhost:38649
+[2022-10-17 16:39:22.414,Pyro5.client,ERROR] cannot connect to ('localhost', 38649): [Errno 111] Connection refused
+[2022-10-17 16:39:22.415,Pyro5.client,ERROR] problem getting metadata: cannot connect
+[2022-10-17 16:39:22.415,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:39:22.415,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:39:24.393,Pyro5.server,DEBUG] daemon exits requestloop
+[2022-10-17 16:39:24.410,Pyro5.server,DEBUG] daemon exits requestloop
+[2022-10-17 16:41:27.605,Pyro5,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2022-10-17 16:41:27.652,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.server.DaemonObject'>
+[2022-10-17 16:41:27.654,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.nameserver.NameServer'>
+[2022-10-17 16:41:27.657,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:41:27.657,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:41:27.658,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:41:27.658,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:41:27.658,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:41:27.658,Pyro5.client,ERROR] cannot connect to ('127.0.1.1', 9090): [Errno 111] Connection refused
+[2022-10-17 16:41:27.658,Pyro5.core,DEBUG] broadcast locate
+[2022-10-17 16:41:29.761,Pyro5.core,DEBUG] broadcast locate failed, try direct connection on NS_HOST
+[2022-10-17 16:41:29.761,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:41:29.761,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:41:29.762,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:41:29.762,Pyro5.naming,DEBUG] using volatile in-memory dict storage
+[2022-10-17 16:41:29.763,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:41:29.763,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:41:29.765,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:41:29.765,Pyro5.server,DEBUG] daemon created on localhost:9090 - IPv4 (pid 23419)
+[2022-10-17 16:41:29.765,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:41:29.765,Pyro5.naming,DEBUG] autoclean not enabled
+[2022-10-17 16:41:29.765,Pyro5.naming,INFO] nameserver daemon created
+[2022-10-17 16:41:29.765,Pyro5.naming,INFO] Not starting NS broadcast server because NS is bound to localhost
+[2022-10-17 16:41:29.766,Pyro5.server,INFO] daemon localhost:9090 entering requestloop
+[2022-10-17 16:41:29.766,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:41:31.765,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:41:31.770,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:41:31.771,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 52244) - unencrypted
+[2022-10-17 16:41:31.771,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:41:31.773,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:41:31.774,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:41:31.774,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:41:31.774,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:41:31.775,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:41:31.776,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 52252) - unencrypted
+[2022-10-17 16:41:31.776,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:41:31.778,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:41:31.778,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:41:31.778,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:41:31.779,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:41:31.779,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:41:31.780,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 52256) - unencrypted
+[2022-10-17 16:41:31.780,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:41:31.782,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:41:31.782,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:41:31.782,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:41:33.786,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:41:33.786,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:41:33.787,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:41:33.788,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:41:33.789,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:41:33.789,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:41:33.796,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:41:33.797,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:41:33.797,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:41:33.798,Pyro5.server,DEBUG] daemon created on localhost:38601 - IPv4 (pid 23419)
+[2022-10-17 16:41:33.799,Pyro5.server,DEBUG] daemon created on localhost:42149 - IPv4 (pid 23419)
+[2022-10-17 16:41:33.800,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:41:33.800,Pyro5.server,DEBUG] daemon created on localhost:40031 - IPv4 (pid 23419)
+[2022-10-17 16:41:33.800,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:41:33.804,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:41:33.805,Pyro5.server,INFO] daemon localhost:38601 entering requestloop
+[2022-10-17 16:41:33.808,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:41:33.815,Pyro5.server,INFO] daemon localhost:40031 entering requestloop
+[2022-10-17 16:41:33.816,Pyro5.server,INFO] daemon localhost:42149 entering requestloop
+[2022-10-17 16:41:33.816,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:41:33.817,Pyro5.client,DEBUG] getting metadata for object obj_43c34e5ce70148fcaf958138fd408cbb
+[2022-10-17 16:41:33.825,Pyro5.client,DEBUG] connecting to PYRO:obj_43c34e5ce70148fcaf958138fd408cbb@localhost:40031
+[2022-10-17 16:41:33.823,Pyro5.client,DEBUG] getting metadata for object obj_8cf17a12268f47548e7b0c1ea0be0db5
+[2022-10-17 16:41:33.818,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:41:33.825,Pyro5.client,DEBUG] getting metadata for object obj_8cf17a12268f47548e7b0c1ea0be0db5
+[2022-10-17 16:41:33.827,Pyro5.client,DEBUG] connecting to PYRO:obj_8cf17a12268f47548e7b0c1ea0be0db5@localhost:38601
+[2022-10-17 16:41:33.828,Pyro5.client,DEBUG] connecting to PYRO:obj_8cf17a12268f47548e7b0c1ea0be0db5@localhost:38601
+[2022-10-17 16:41:33.828,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 54908) - unencrypted
+[2022-10-17 16:41:33.830,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:41:33.831,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 38758) - unencrypted
+[2022-10-17 16:41:33.831,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:41:33.833,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:41:33.834,Pyro5.client,DEBUG] connected to PYRO:obj_43c34e5ce70148fcaf958138fd408cbb@localhost:40031 - IPv4 - unencrypted
+[2022-10-17 16:41:33.835,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 38766) - unencrypted
+[2022-10-17 16:41:33.835,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:41:33.837,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 54908)
+[2022-10-17 16:41:33.838,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:41:33.839,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:41:33.840,Pyro5.client,DEBUG] getting metadata for object obj_43c34e5ce70148fcaf958138fd408cbb
+[2022-10-17 16:41:33.840,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:41:33.841,Pyro5.client,DEBUG] connected to PYRO:obj_8cf17a12268f47548e7b0c1ea0be0db5@localhost:38601 - IPv4 - unencrypted
+[2022-10-17 16:41:33.841,Pyro5.client,DEBUG] connecting to PYRO:obj_43c34e5ce70148fcaf958138fd408cbb@localhost:40031
+[2022-10-17 16:41:33.842,Pyro5.client,DEBUG] connected to PYRO:obj_8cf17a12268f47548e7b0c1ea0be0db5@localhost:38601 - IPv4 - unencrypted
+[2022-10-17 16:41:33.844,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 38766)
+[2022-10-17 16:41:33.845,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:41:33.846,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 54924) - unencrypted
+[2022-10-17 16:41:33.847,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:41:33.847,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 38758)
+[2022-10-17 16:41:33.849,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:41:33.849,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:41:33.850,Pyro5.client,DEBUG] connected to PYRO:obj_43c34e5ce70148fcaf958138fd408cbb@localhost:40031 - IPv4 - unencrypted
+[2022-10-17 16:41:33.851,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 54924)
+[2022-10-17 16:41:33.852,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:41:33.852,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:41:33.853,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:41:35.838,Pyro5.server,DEBUG] daemon exits requestloop
+[2022-10-17 16:43:09.876,Pyro5,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2022-10-17 16:43:09.924,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.server.DaemonObject'>
+[2022-10-17 16:43:09.927,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.nameserver.NameServer'>
+[2022-10-17 16:43:09.930,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:09.931,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:09.931,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:43:09.931,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:43:09.931,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:43:09.931,Pyro5.client,ERROR] cannot connect to ('127.0.1.1', 9090): [Errno 111] Connection refused
+[2022-10-17 16:43:09.931,Pyro5.core,DEBUG] broadcast locate
+[2022-10-17 16:43:12.035,Pyro5.core,DEBUG] broadcast locate failed, try direct connection on NS_HOST
+[2022-10-17 16:43:12.035,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:12.036,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:12.037,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:43:12.038,Pyro5.naming,DEBUG] using volatile in-memory dict storage
+[2022-10-17 16:43:12.040,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:43:12.040,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:43:12.043,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:43:12.044,Pyro5.server,DEBUG] daemon created on localhost:9090 - IPv4 (pid 23607)
+[2022-10-17 16:43:12.044,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:43:12.045,Pyro5.naming,DEBUG] autoclean not enabled
+[2022-10-17 16:43:12.045,Pyro5.naming,INFO] nameserver daemon created
+[2022-10-17 16:43:12.045,Pyro5.naming,INFO] Not starting NS broadcast server because NS is bound to localhost
+[2022-10-17 16:43:12.046,Pyro5.server,INFO] daemon localhost:9090 entering requestloop
+[2022-10-17 16:43:12.046,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:43:14.040,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:14.041,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:14.042,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 46800) - unencrypted
+[2022-10-17 16:43:14.042,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:43:14.044,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:43:14.045,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:43:14.045,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:43:14.045,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:14.046,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:14.047,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 46808) - unencrypted
+[2022-10-17 16:43:14.047,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:43:14.049,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:43:14.049,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:43:14.049,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:43:14.050,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:14.050,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:14.051,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 46812) - unencrypted
+[2022-10-17 16:43:14.051,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:43:14.053,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:43:14.053,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:43:14.054,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:43:16.057,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:43:16.057,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:43:16.058,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:43:16.059,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:43:16.059,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:43:16.061,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:43:16.064,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:43:16.066,Pyro5.server,DEBUG] daemon created on localhost:44101 - IPv4 (pid 23607)
+[2022-10-17 16:43:16.067,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:43:16.071,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:43:16.073,Pyro5.server,INFO] daemon localhost:44101 entering requestloop
+[2022-10-17 16:43:16.074,Pyro5.server,DEBUG] daemon created on localhost:45721 - IPv4 (pid 23607)
+[2022-10-17 16:43:16.074,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:43:16.075,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:43:16.075,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:43:16.079,Pyro5.server,DEBUG] daemon created on localhost:41945 - IPv4 (pid 23607)
+[2022-10-17 16:43:16.080,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:43:16.083,Pyro5.server,INFO] daemon localhost:45721 entering requestloop
+[2022-10-17 16:43:16.083,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:43:16.085,Pyro5.server,INFO] daemon localhost:41945 entering requestloop
+[2022-10-17 16:43:16.087,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:43:16.090,Pyro5.client,DEBUG] getting metadata for object obj_056078c16e7c433aa194d914af0ed47f
+[2022-10-17 16:43:16.092,Pyro5.client,DEBUG] connecting to PYRO:obj_056078c16e7c433aa194d914af0ed47f@localhost:41945
+[2022-10-17 16:43:16.095,Pyro5.client,DEBUG] getting metadata for object obj_c7e7a631823a4008b9397a330377d3de
+[2022-10-17 16:43:16.095,Pyro5.client,DEBUG] connecting to PYRO:obj_c7e7a631823a4008b9397a330377d3de@localhost:45721
+[2022-10-17 16:43:16.096,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 54682) - unencrypted
+[2022-10-17 16:43:16.096,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:43:16.099,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:43:16.099,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 35388) - unencrypted
+[2022-10-17 16:43:16.100,Pyro5.client,DEBUG] connected to PYRO:obj_056078c16e7c433aa194d914af0ed47f@localhost:41945 - IPv4 - unencrypted
+[2022-10-17 16:43:16.100,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:43:16.103,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:43:16.103,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 54682)
+[2022-10-17 16:43:16.104,Pyro5.client,DEBUG] connected to PYRO:obj_c7e7a631823a4008b9397a330377d3de@localhost:45721 - IPv4 - unencrypted
+[2022-10-17 16:43:16.105,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:43:16.106,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 35388)
+[2022-10-17 16:43:16.106,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:43:31.499,Pyro5,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2022-10-17 16:43:31.547,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.server.DaemonObject'>
+[2022-10-17 16:43:31.551,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.nameserver.NameServer'>
+[2022-10-17 16:43:31.554,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:31.555,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:31.555,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:43:31.555,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:43:31.555,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:43:31.555,Pyro5.client,ERROR] cannot connect to ('127.0.1.1', 9090): [Errno 111] Connection refused
+[2022-10-17 16:43:31.555,Pyro5.core,DEBUG] broadcast locate
+[2022-10-17 16:43:33.659,Pyro5.core,DEBUG] broadcast locate failed, try direct connection on NS_HOST
+[2022-10-17 16:43:33.659,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:33.660,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:33.661,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:43:33.663,Pyro5.naming,DEBUG] using volatile in-memory dict storage
+[2022-10-17 16:43:33.666,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:43:33.667,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:43:33.672,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:43:33.674,Pyro5.server,DEBUG] daemon created on localhost:9090 - IPv4 (pid 23688)
+[2022-10-17 16:43:33.674,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:43:33.675,Pyro5.naming,DEBUG] autoclean not enabled
+[2022-10-17 16:43:33.675,Pyro5.naming,INFO] nameserver daemon created
+[2022-10-17 16:43:33.676,Pyro5.naming,INFO] Not starting NS broadcast server because NS is bound to localhost
+[2022-10-17 16:43:33.676,Pyro5.server,INFO] daemon localhost:9090 entering requestloop
+[2022-10-17 16:43:33.677,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:43:35.667,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:35.667,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:35.669,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 55964) - unencrypted
+[2022-10-17 16:43:35.669,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:43:35.671,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:43:35.672,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:43:35.672,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:43:35.673,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:35.673,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:35.674,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 55980) - unencrypted
+[2022-10-17 16:43:35.675,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:43:35.676,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:43:35.676,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:43:35.677,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:43:35.677,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:35.677,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:43:35.679,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 55988) - unencrypted
+[2022-10-17 16:43:35.679,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:43:35.681,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:43:35.682,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:43:35.682,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:43:37.685,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:43:37.686,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:43:37.686,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:43:37.687,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:43:37.688,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:43:37.688,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:43:37.694,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:43:37.696,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:43:37.697,Pyro5.server,DEBUG] daemon created on localhost:41609 - IPv4 (pid 23688)
+[2022-10-17 16:43:37.698,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:43:37.699,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:43:37.700,Pyro5.server,DEBUG] daemon created on localhost:37239 - IPv4 (pid 23688)
+[2022-10-17 16:43:37.700,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:43:37.701,Pyro5.server,DEBUG] daemon created on localhost:44721 - IPv4 (pid 23688)
+[2022-10-17 16:43:37.703,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:43:37.706,Pyro5.server,INFO] daemon localhost:37239 entering requestloop
+[2022-10-17 16:43:37.707,Pyro5.server,INFO] daemon localhost:41609 entering requestloop
+[2022-10-17 16:43:37.707,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:43:37.712,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:43:37.713,Pyro5.server,INFO] daemon localhost:44721 entering requestloop
+[2022-10-17 16:43:37.718,Pyro5.client,DEBUG] getting metadata for object obj_42897a970d884a28bbb5579fc82c579f
+[2022-10-17 16:43:37.720,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:43:37.721,Pyro5.client,DEBUG] getting metadata for object obj_6c63d067950842dc97774ee07508723b
+[2022-10-17 16:43:37.722,Pyro5.client,DEBUG] connecting to PYRO:obj_42897a970d884a28bbb5579fc82c579f@localhost:37239
+[2022-10-17 16:43:37.723,Pyro5.client,DEBUG] getting metadata for object obj_1a1518f6b3fa4588922af3c7851117c1
+[2022-10-17 16:43:37.724,Pyro5.client,DEBUG] connecting to PYRO:obj_6c63d067950842dc97774ee07508723b@localhost:44721
+[2022-10-17 16:43:37.724,Pyro5.client,DEBUG] connecting to PYRO:obj_1a1518f6b3fa4588922af3c7851117c1@localhost:41609
+[2022-10-17 16:43:37.726,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 55770) - unencrypted
+[2022-10-17 16:43:37.727,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:43:37.729,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 53928) - unencrypted
+[2022-10-17 16:43:37.730,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:43:37.730,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:43:37.734,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 38980) - unencrypted
+[2022-10-17 16:43:37.735,Pyro5.client,DEBUG] connected to PYRO:obj_42897a970d884a28bbb5579fc82c579f@localhost:37239 - IPv4 - unencrypted
+[2022-10-17 16:43:37.736,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:43:37.737,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:43:37.740,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:43:37.740,Pyro5.client,DEBUG] connected to PYRO:obj_1a1518f6b3fa4588922af3c7851117c1@localhost:41609 - IPv4 - unencrypted
+[2022-10-17 16:43:37.741,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 55770)
+[2022-10-17 16:43:37.741,Pyro5.client,DEBUG] connected to PYRO:obj_6c63d067950842dc97774ee07508723b@localhost:44721 - IPv4 - unencrypted
+[2022-10-17 16:43:37.743,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 53928)
+[2022-10-17 16:43:37.743,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:43:37.744,Pyro5.client,DEBUG] getting metadata for object obj_1a1518f6b3fa4588922af3c7851117c1
+[2022-10-17 16:43:37.744,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 38980)
+[2022-10-17 16:43:37.744,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:43:37.745,Pyro5.client,DEBUG] connecting to PYRO:obj_1a1518f6b3fa4588922af3c7851117c1@localhost:41609
+[2022-10-17 16:43:37.745,Pyro5.client,DEBUG] getting metadata for object obj_6c63d067950842dc97774ee07508723b
+[2022-10-17 16:43:37.745,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:43:37.746,Pyro5.client,DEBUG] connecting to PYRO:obj_6c63d067950842dc97774ee07508723b@localhost:44721
+[2022-10-17 16:43:37.746,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 53942) - unencrypted
+[2022-10-17 16:43:37.747,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:43:37.747,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 38996) - unencrypted
+[2022-10-17 16:43:37.748,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:43:37.748,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:43:37.748,Pyro5.client,DEBUG] connected to PYRO:obj_1a1518f6b3fa4588922af3c7851117c1@localhost:41609 - IPv4 - unencrypted
+[2022-10-17 16:43:37.749,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:43:37.750,Pyro5.client,DEBUG] connected to PYRO:obj_6c63d067950842dc97774ee07508723b@localhost:44721 - IPv4 - unencrypted
+[2022-10-17 16:43:37.750,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 53942)
+[2022-10-17 16:43:37.750,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:43:37.750,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 38996)
+[2022-10-17 16:43:37.751,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:43:37.751,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:43:37.751,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:43:37.751,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:43:37.752,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:45:14.165,Pyro5,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2022-10-17 16:45:14.213,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.server.DaemonObject'>
+[2022-10-17 16:45:14.215,Pyro5.server,DEBUG] exposing all members of <class 'Pyro5.nameserver.NameServer'>
+[2022-10-17 16:45:14.219,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:45:14.219,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:45:14.219,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:45:14.220,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:45:14.220,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@127.0.1.1:9090
+[2022-10-17 16:45:14.220,Pyro5.client,ERROR] cannot connect to ('127.0.1.1', 9090): [Errno 111] Connection refused
+[2022-10-17 16:45:14.220,Pyro5.core,DEBUG] broadcast locate
+[2022-10-17 16:45:16.324,Pyro5.core,DEBUG] broadcast locate failed, try direct connection on NS_HOST
+[2022-10-17 16:45:16.325,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:45:16.325,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:45:16.326,Pyro5.client,ERROR] cannot connect to ('localhost', 9090): [Errno 111] Connection refused
+[2022-10-17 16:45:16.327,Pyro5.naming,DEBUG] using volatile in-memory dict storage
+[2022-10-17 16:45:16.329,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:45:16.329,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:45:16.332,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:45:16.333,Pyro5.server,DEBUG] daemon created on localhost:9090 - IPv4 (pid 24054)
+[2022-10-17 16:45:16.333,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:45:16.334,Pyro5.naming,DEBUG] autoclean not enabled
+[2022-10-17 16:45:16.334,Pyro5.naming,INFO] nameserver daemon created
+[2022-10-17 16:45:16.334,Pyro5.naming,INFO] Not starting NS broadcast server because NS is bound to localhost
+[2022-10-17 16:45:16.335,Pyro5.server,INFO] daemon localhost:9090 entering requestloop
+[2022-10-17 16:45:16.335,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:45:18.330,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:45:18.331,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:45:18.332,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 49274) - unencrypted
+[2022-10-17 16:45:18.333,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:45:18.335,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:45:18.335,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:45:18.335,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:45:18.336,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:45:18.336,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:45:18.337,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 49288) - unencrypted
+[2022-10-17 16:45:18.337,Pyro5.threadpoolserver,DEBUG] worker counts: 2 busy, 2 idle
+[2022-10-17 16:45:18.339,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:45:18.339,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:45:18.339,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:45:18.340,Pyro5.core,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:45:18.340,Pyro5.client,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2022-10-17 16:45:18.342,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 49298) - unencrypted
+[2022-10-17 16:45:18.342,Pyro5.threadpoolserver,DEBUG] worker counts: 3 busy, 1 idle
+[2022-10-17 16:45:18.344,Pyro5.client,DEBUG] from meta: methods=['count', 'list', 'lookup', 'ping', 'register', 'remove', 'set_metadata', 'yplookup'], oneway methods=[], attributes=[]
+[2022-10-17 16:45:18.344,Pyro5.client,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090 - IPv4 - unencrypted
+[2022-10-17 16:45:18.344,Pyro5.core,DEBUG] located NS
+[2022-10-17 16:45:20.347,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:45:20.348,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:45:20.350,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:45:20.350,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:45:20.351,Pyro5.threadpoolserver,INFO] starting thread pool socketserver
+[2022-10-17 16:45:20.352,Pyro5.threadpoolserver,INFO] not using SSL
+[2022-10-17 16:45:20.356,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:45:20.358,Pyro5.server,DEBUG] daemon created on localhost:35413 - IPv4 (pid 24054)
+[2022-10-17 16:45:20.359,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:45:20.360,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:45:20.363,Pyro5.server,DEBUG] daemon created on localhost:43611 - IPv4 (pid 24054)
+[2022-10-17 16:45:20.364,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:45:20.365,Pyro5.server,INFO] daemon localhost:35413 entering requestloop
+[2022-10-17 16:45:20.365,Pyro5.threadpoolserver,DEBUG] worker pool created with initial size 4
+[2022-10-17 16:45:20.366,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:45:20.372,Pyro5.server,INFO] daemon localhost:43611 entering requestloop
+[2022-10-17 16:45:20.375,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:45:20.373,Pyro5.client,DEBUG] getting metadata for object obj_1047f0c181194862be3e1690ef14f7cb
+[2022-10-17 16:45:20.373,Pyro5.server,DEBUG] daemon created on localhost:38763 - IPv4 (pid 24054)
+[2022-10-17 16:45:20.377,Pyro5.server,DEBUG] pyro protocol version: 502
+[2022-10-17 16:45:20.376,Pyro5.client,DEBUG] connecting to PYRO:obj_1047f0c181194862be3e1690ef14f7cb@localhost:43611
+[2022-10-17 16:45:20.379,Pyro5.client,DEBUG] getting metadata for object obj_75d7d215072144908cbac0045df8dff1
+[2022-10-17 16:45:20.381,Pyro5.client,DEBUG] connecting to PYRO:obj_75d7d215072144908cbac0045df8dff1@localhost:35413
+[2022-10-17 16:45:20.383,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 47404) - unencrypted
+[2022-10-17 16:45:20.384,Pyro5.server,INFO] daemon localhost:38763 entering requestloop
+[2022-10-17 16:45:20.384,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:45:20.387,Pyro5.threadpoolserver,DEBUG] threadpool server requestloop
+[2022-10-17 16:45:20.389,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 42664) - unencrypted
+[2022-10-17 16:45:20.390,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:45:20.392,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:45:20.392,Pyro5.client,DEBUG] getting metadata for object obj_75d7d215072144908cbac0045df8dff1
+[2022-10-17 16:45:20.394,Pyro5.client,DEBUG] connected to PYRO:obj_1047f0c181194862be3e1690ef14f7cb@localhost:43611 - IPv4 - unencrypted
+[2022-10-17 16:45:20.395,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:45:20.395,Pyro5.client,DEBUG] connecting to PYRO:obj_75d7d215072144908cbac0045df8dff1@localhost:35413
+[2022-10-17 16:45:20.397,Pyro5.client,DEBUG] connected to PYRO:obj_75d7d215072144908cbac0045df8dff1@localhost:35413 - IPv4 - unencrypted
+[2022-10-17 16:45:20.397,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 47404)
+[2022-10-17 16:45:20.399,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:45:20.399,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 42664)
+[2022-10-17 16:45:20.400,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 42668) - unencrypted
+[2022-10-17 16:45:20.400,Pyro5.client,DEBUG] getting metadata for object obj_1047f0c181194862be3e1690ef14f7cb
+[2022-10-17 16:45:20.400,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:45:20.401,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:45:20.402,Pyro5.client,DEBUG] connecting to PYRO:obj_1047f0c181194862be3e1690ef14f7cb@localhost:43611
+[2022-10-17 16:45:20.402,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:45:20.403,Pyro5.client,DEBUG] connected to PYRO:obj_75d7d215072144908cbac0045df8dff1@localhost:35413 - IPv4 - unencrypted
+[2022-10-17 16:45:20.404,Pyro5.threadpoolserver,DEBUG] connected ('127.0.0.1', 47406) - unencrypted
+[2022-10-17 16:45:20.404,Pyro5.threadpoolserver,DEBUG] worker counts: 1 busy, 3 idle
+[2022-10-17 16:45:20.405,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 42668)
+[2022-10-17 16:45:20.405,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:45:20.406,Pyro5.client,DEBUG] from meta: methods=['add_neighbor', 'buy', 'lookup', 'reply'], oneway methods=[], attributes=[]
+[2022-10-17 16:45:20.406,Pyro5.client,DEBUG] connected to PYRO:obj_1047f0c181194862be3e1690ef14f7cb@localhost:43611 - IPv4 - unencrypted
+[2022-10-17 16:45:20.407,Pyro5.server,DEBUG] daemon closing
+[2022-10-17 16:45:20.407,Pyro5.threadpoolserver,DEBUG] closing down
+[2022-10-17 16:45:20.407,Pyro5.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 47406)
+[2022-10-17 16:45:20.408,Pyro5.threadpoolserver,DEBUG] worker counts: 0 busy, 4 idle
+[2022-10-17 16:45:22.405,Pyro5.server,DEBUG] daemon exits requestloop
