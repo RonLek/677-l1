@@ -23,7 +23,7 @@ class Peer(Thread):
         self.product_count = product_count
         self.role = role
         self.ns = self.get_nameserver(hostname)
-        self.executor = ThreadPoolExecutor(max_workers=5)
+        self.executor = ThreadPoolExecutor(max_workers=10)
         self.seller_list_lock = Lock()
         self.product_count_lock = Lock()
         self.seller_list = []
@@ -48,19 +48,25 @@ class Peer(Thread):
         # print("neighbor list", neighbor_list)
         if neighbor_list:
             for i in range(3):
+                if self.get_neighbor_len() >= 3:
+                    break
                 random_neighbor_id = neighbor_list[random.randint(0, len(neighbor_list)-1)]
                 self.neighbors[random_neighbor_id] = self.ns.lookup(random_neighbor_id)
 
-            with Pyro5.api.Proxy(self.neighbors[random_neighbor_id]) as neighbor:
-                try:
-                    self.executor.submit(neighbor.add_neighbor, self.id)
-                except Exception as e:
-                    print(datetime.datetime.now(), "Exception in connect_neighbors", e)
+                with Pyro5.api.Proxy(self.neighbors[random_neighbor_id]) as neighbor:
+                    try:
+                        self.executor.submit(neighbor.add_neighbor, self.id)
+                    except Exception as e:
+                        print(datetime.datetime.now(), "Exception in connect_neighbors", e)
 
     @Pyro5.server.expose
     def add_neighbor(self, neighbor_id):
-        if neighbor_id not in self.neighbors:
+        if neighbor_id not in self.neighbors.keys():
             self.neighbors[neighbor_id] = self.ns.lookup(neighbor_id)
+
+    @Pyro5.server.expose
+    def get_neighbor_len(self):
+        return len(self.neighbors.keys())
 
     def get_nameserver(self, ns_name):
 
@@ -82,13 +88,15 @@ class Peer(Thread):
                 self.ns.register(self.id, uri)
                 if self.role == "buyer":
                     print(datetime.datetime.now(), self.id, "joins to buy ", self.product_name)
-                    time.sleep(1)
                 else:
                     print(datetime.datetime.now(), self.id, "joins to sell ", self.product_name)
-                    time.sleep(1)
 
                 self.executor.submit(daemon.requestLoop)
+                time.sleep(1)
+
                 self.get_random_neighbors()
+
+                # print(self.id, " neighbors ", self.neighbors)
 
                 while True and self.role == "buyer":
 
@@ -101,7 +109,7 @@ class Peer(Thread):
                             print(datetime.datetime.now() , self.id, "searching for ", self.product_name, " in ", neighbor_name)
                             # print("neighbor", neighbor)
                             # neighbor._pyroClaimOwnership()
-                            neighbor.lookup(self.id, self.product_name, 5, search_path)
+                            neighbor.lookup(self.id, self.product_name, 10, search_path)
                             # print("lookup_requests", lookup_requests)
 
                     # for request in lookup_requests:
@@ -151,7 +159,7 @@ class Peer(Thread):
             return
 
         try:
-            if self.role == "seller" and self.product_name == product_name and self.product_count > 0:
+            if self.role == "seller" and self.product_name == product_name and self.product_count >= 0:
                 print(datetime.datetime.now(), "seller found with ID: ", self.id)
                 # inserting seller id at the front of the search path for easier reply
                 search_path.insert(0, self.id)
@@ -191,6 +199,7 @@ class Peer(Thread):
                     self.product_count = self.n
                     print(datetime.datetime.now(), self.id , "now selling", self.product_name)
                     return False
+
         except Exception as e:
             print(datetime.datetime.now(), "Exception in buy", e)
             return
@@ -206,7 +215,8 @@ class Peer(Thread):
 
                 # adding seller to the list of sellers
                 with self.seller_list_lock:
-                    self.seller_list.extend(reply_path)
+                    if reply_path[0] not in self.seller_list:
+                        self.seller_list.extend(reply_path)
 
             elif reply_path and len(reply_path) > 1:
                 intermediate_peer = reply_path.pop()
