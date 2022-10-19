@@ -8,7 +8,7 @@ import sys
 import time
 
 def get_people(config):
-    n_people = 6
+    n_people = 2
     n_items = 5
     roles = ['buyer', 'seller']
     goods = ['fish', 'salt', 'boar']
