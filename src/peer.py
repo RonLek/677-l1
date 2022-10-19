@@ -12,6 +12,17 @@ import sys
 class Peer(Thread):
 
     def __init__(self, id, role, product_count, products, hostname):
+        """
+        Construct a new 'Peer' object.
+
+        :param id: The id of the peer
+        :param role: The role of the peer
+        :param product_count: The maximum number of products the peer can sell (if role is seller)
+        :param products: The list of products that a peer can buy or sell
+        :param hostname: The hostname of the peer
+        :return: returns nothing
+        """
+
         Thread.__init__(self)
         self.id = id
         self.hostname = hostname
@@ -29,10 +40,13 @@ class Peer(Thread):
         self.seller_list = []
 
     def get_random_neighbors(self):
+        """
+        Create a neighbor list and assign neighbors to the peer
+        :return: returns nothing
+        """
         neighbor_list = []
         ns_dict = self.ns.list()
         re_pattern = "seller[0-9]+|buyer[0-9]+"
-        # print("ns_dict", ns_dict)
         for id in ns_dict:
             if "NameServer" not in id and self.id != id and re.match(re_pattern, id):
                 neighbor_list.append(id)
@@ -43,9 +57,11 @@ class Peer(Thread):
         # TODO: add neighbors with different hostname
 
     def connect_neighbors(self, neighbor_list):
-
-        # randomly pick one neighbor
-        # print("neighbor list", neighbor_list)
+        """
+        Select at most 3 random neighbors from the neighbor list and connect to them
+        :param neighbor_list: The list of neighbors
+        :return: nothing
+        """
         if neighbor_list:
             for i in range(3):
                 if self.get_neighbor_len() >= 3:
@@ -61,14 +77,28 @@ class Peer(Thread):
 
     @Pyro5.server.expose
     def add_neighbor(self, neighbor_id):
+        """
+        Add a neighbor to the peer's neighbor list
+        :param neighbor_id: The id of the neighbor to add
+        :return: nothing
+        """
         if neighbor_id not in self.neighbors.keys():
             self.neighbors[neighbor_id] = self.ns.lookup(neighbor_id)
 
     @Pyro5.server.expose
     def get_neighbor_len(self):
+        """
+        Get the number of neighbors of the peer
+        :return: The number of neighbors
+        """
         return len(self.neighbors.keys())
 
     def get_nameserver(self, ns_name):
+        """
+        Get the nameserver proxy
+        :param ns_name: The hostname of the nameserver
+        :return: The nameserver proxy
+        """
 
         try:
             ns = Pyro5.core.locate_ns(host=ns_name)
@@ -79,6 +109,10 @@ class Peer(Thread):
             print(message)
 
     def run(self):
+        """
+        Starts the market simulation
+        :return: nothing
+        """
 
         try:
             with Pyro5.server.Daemon(host=self.hostname) as daemon:
@@ -96,25 +130,13 @@ class Peer(Thread):
 
                 self.get_random_neighbors()
 
-                # print(self.id, " neighbors ", self.neighbors)
-
                 while True and self.role == "buyer":
 
-                    # lookup_requests = []
-
-                    # print(self.neighbors, "\n")
                     for neighbor_name in self.neighbors:
                         with Pyro5.api.Proxy(self.neighbors[neighbor_name]) as neighbor:
                             search_path = [self.id]
                             print(datetime.datetime.now() , self.id, "searching for ", self.product_name, " in ", neighbor_name)
-                            # print("neighbor", neighbor)
-                            # neighbor._pyroClaimOwnership()
                             neighbor.lookup(self.id, self.product_name, 10, search_path)
-                            # print("lookup_requests", lookup_requests)
-
-                    # for request in lookup_requests:
-
-                    #     request.result()
 
                     with self.seller_list_lock:
 
@@ -144,6 +166,14 @@ class Peer(Thread):
 
     @Pyro5.server.expose
     def lookup(self, bID, product_name, hopcount, search_path):
+        """
+        Lookup a product in the peer's neighbor list
+        :param bID: The id of the buyer
+        :param product_name: The name of the product to lookup
+        :param hopcount: The number of hops left
+        :param search_path: The path of the search
+        :return: nothing
+        """
         # this procedure, executed initially by buyer processes then recursively 
         # between directly connected peer processes in the network, should search 
         # the network; all matching sellers respond to this message with their IDs. 
@@ -151,8 +181,6 @@ class Peer(Thread):
         # is decremented at each hop and the message is discarded when it reaches 0.
         
         last_peer = search_path[-1]
-        # print(self.id, "\nneighbors")
-        # print(self.neighbors)        
         hopcount -= 1
 
         if hopcount < 0:
@@ -167,11 +195,9 @@ class Peer(Thread):
 
             else:
                 # continue lookup
-                # print("within continue lookup")
                 for neighbor_name in self.neighbors:
                     if neighbor_name != last_peer:
                         with Pyro5.api.Proxy(self.neighbors[neighbor_name]) as neighbor:
-                            # print("neighbor within continue lookup", neighbor)
                             if self.id not in search_path:
                                 search_path.append(self.id)
                             self.executor.submit(neighbor.lookup, bID, product_name, hopcount, search_path)
@@ -181,8 +207,12 @@ class Peer(Thread):
             return
 
     @Pyro5.server.expose
-    # :peer_id: the id of the buyer
     def buy(self, peer_id):
+        """
+        Buy a product from the seller
+        :param peer_id: The id of the buyer
+        :return: nothing
+        """
 
         try:
             with self.product_count_lock:
@@ -206,8 +236,13 @@ class Peer(Thread):
 
     @Pyro5.server.expose
     def reply(self, peer_id, reply_path):
+        """
+        Build the seller list for the buyer
+        :param peer_id: The id of the seller
+        :param reply_path: The complete path of the reply
+        :return: nothing
+        """
 
-        # print("reply_path", reply_path)
         try:
             # only 1 peer id in reply_path which is the seller
             if reply_path and len(reply_path) == 1:
@@ -220,8 +255,6 @@ class Peer(Thread):
 
             elif reply_path and len(reply_path) > 1:
                 intermediate_peer = reply_path.pop()
-                # print("self.neighbors", self.neighbors)
-                # print("intermediate_peer", intermediate_peer)
                 with Pyro5.api.Proxy("PYRONAME:" + intermediate_peer) as neighbor:
                     neighbor.reply(peer_id, reply_path)
 
@@ -230,4 +263,3 @@ class Peer(Thread):
             message = template.format(type(e).__name__, e.args)
             print(datetime.datetime.now(), message)
             sys.exit()
-
