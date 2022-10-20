@@ -5,7 +5,7 @@ import random
 import sys
 import time
 
-def get_people():
+def get_peers():
     n_peers = 6
     n_items = 5
     max_neighbors = 3
@@ -47,7 +47,7 @@ def get_people():
 
 if __name__ == "__main__":
 
-    peers = get_people()
+    peers = get_peers()
 
     time.sleep(2)
     try:
