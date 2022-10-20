@@ -11,7 +11,7 @@ import sys
 
 class Peer(Thread):
 
-    def __init__(self, id, role, product_count, products, hostname):
+    def __init__(self, id, role, product_count, products, hostname, max_neighbors, hopcount):
         """
         Construct a new 'Peer' object.
 
@@ -20,6 +20,8 @@ class Peer(Thread):
         :param product_count: The maximum number of products the peer can sell (if role is seller)
         :param products: The list of products that a peer can buy or sell
         :param hostname: The hostname of the peer
+        :param max_neighbors: The maximum number of neighbors a peer can have
+        :param hopcount: The maximum number of hops a peer can search for a product
         :return: returns nothing
         """
 
@@ -38,6 +40,8 @@ class Peer(Thread):
         self.seller_list_lock = Lock()
         self.product_count_lock = Lock()
         self.seller_list = []
+        self.max_neighbors = max_neighbors
+        self.hopcount = hopcount
 
     def get_random_neighbors(self):
         """
@@ -54,17 +58,15 @@ class Peer(Thread):
 
         neighbor_list.clear()
 
-        # TODO: add neighbors with different hostname
-
     def connect_neighbors(self, neighbor_list):
         """
-        Select at most 3 random neighbors from the neighbor list and connect to them
+        Select at most max_neighbors random neighbors from the neighbor list and connect to them
         :param neighbor_list: The list of neighbors
         :return: nothing
         """
         if neighbor_list:
-            for i in range(3):
-                if self.get_neighbor_len() >= 3:
+            for i in range(self.max_neighbors):
+                if self.get_neighbor_len() >= self.max_neighbors:
                     break
                 random_neighbor_id = neighbor_list[random.randint(0, len(neighbor_list)-1)]
                 self.neighbors[random_neighbor_id] = self.ns.lookup(random_neighbor_id)
@@ -136,7 +138,7 @@ class Peer(Thread):
                         with Pyro5.api.Proxy(self.neighbors[neighbor_name]) as neighbor:
                             search_path = [self.id]
                             print(datetime.datetime.now() , self.id, "searching for ", self.product_name, " in ", neighbor_name)
-                            neighbor.lookup(self.id, self.product_name, 10, search_path)
+                            neighbor.lookup(self.id, self.product_name, self.hopcount, search_path)
 
                     with self.seller_list_lock:
 
