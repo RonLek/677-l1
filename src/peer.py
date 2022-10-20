@@ -10,6 +10,19 @@ import re
 import sys
 
 class Peer(Thread):
+    """
+    The Peer class represents a buyer or a seller within the P2P network.
+    It has the following methods:
+    1. get_random_neighbors - Create a neighbor list and assign neighbors to the peer
+    2. connect_neighbors - Select at most max_neighbors random neighbors from the neighbor list and connect to them
+    3. add_neighbor - Add a neighbor to the peer's neighbor list
+    4. get_neighbor_len - Get the number of neighbors of the peer
+    5. get_nameserver - Get the nameserver proxy
+    6. run - Starts the market simulation
+    7. lookup - Search for a product in the P2P network
+    8. buy - Buy a product from a seller
+    9. reply - Build the seller list for the buyer
+    """
 
     def __init__(self, id, role, product_count, products, hostname, max_neighbors, hopcount):
         """
@@ -51,6 +64,8 @@ class Peer(Thread):
         neighbor_list = []
         ns_dict = self.ns.list()
         re_pattern = "seller[0-9]+|buyer[0-9]+"
+
+        # Build a list of neighbors from the nameserver excluding the peer itself
         for id in ns_dict:
             if "NameServer" not in id and self.id != id and re.match(re_pattern, id):
                 neighbor_list.append(id)
@@ -65,6 +80,9 @@ class Peer(Thread):
         :return: nothing
         """
         if neighbor_list:
+
+            # Select at most max_neighbors random neighbors from the neighbor list
+            # while making sure that the selected neighbor also has at most max_neighbors neighbors
             for i in range(self.max_neighbors):
                 if self.get_neighbor_len() >= self.max_neighbors:
                     break
@@ -84,6 +102,7 @@ class Peer(Thread):
         :param neighbor_id: The id of the neighbor to add
         :return: nothing
         """
+        # Complete bi-directional connections
         if neighbor_id not in self.neighbors.keys():
             self.neighbors[neighbor_id] = self.ns.lookup(neighbor_id)
 
@@ -106,9 +125,7 @@ class Peer(Thread):
             ns = Pyro5.core.locate_ns(host=ns_name)
             return ns
         except Exception as e:
-            template = "An exception of type {0} occurred at get_nameserver. Arguments:\n{1!r}"
-            message = template.format(type(e).__name__, e.args)
-            print(message)
+            print(datetime.datetime.now(), "Exception in get_nameserver", e)
 
     def run(self):
         """
@@ -119,46 +136,58 @@ class Peer(Thread):
         try:
             with Pyro5.server.Daemon(host=self.hostname) as daemon:
                 uri = daemon.register(self)
-                # claim thread ownership of ns server proxy
+                # Claim thread ownership of ns server proxy since each Pyro proxy is a thread
                 self.ns._pyroClaimOwnership()
                 self.ns.register(self.id, uri)
+
                 if self.role == "buyer":
                     print(datetime.datetime.now(), self.id, "joins to buy ", self.product_name)
                 else:
                     print(datetime.datetime.now(), self.id, "joins to sell ", self.product_name)
 
+                # Peer starts listening for requests
                 self.executor.submit(daemon.requestLoop)
                 time.sleep(1)
 
+                # Create a neighbor list and assign neighbors to the peer
                 self.get_random_neighbors()
 
+                # Buyer starts searching for a product
                 while True and self.role == "buyer":
 
+                    # Begin searching in a depth-first manner
                     for neighbor_name in self.neighbors:
                         with Pyro5.api.Proxy(self.neighbors[neighbor_name]) as neighbor:
+
+                            # Buyer forms the first element of the search path
                             search_path = [self.id]
                             print(datetime.datetime.now() , self.id, "searching for ", self.product_name, " in ", neighbor_name)
                             neighbor.lookup(self.id, self.product_name, self.hopcount, search_path)
 
+                    # Lock the seller list to maintain consistency
                     with self.seller_list_lock:
 
                         print(datetime.datetime.now(), "seller list for ", self.id , "is: ", self.seller_list)
-                        # select random seller
+                        
+                        # Select a random seller
                         if self.seller_list:
                             random_seller = self.seller_list[random.randint(0, len(self.seller_list)-1)]
 
+                            # Buy a product from the selected seller
                             with Pyro5.client.Proxy(self.neighbors[random_seller]) as seller:
+                                # Claim ownership of the seller proxy since each Pyro proxy is a thread
                                 seller._pyroClaimOwnership()
                                 seller.buy(self.id)
                         else:
                             print(datetime.datetime.now(), "no sellers found within hop limit for ", self.id)
                         
+                        # Clear the seller list and assign a random product to the buyer
                         self.seller_list = []
                         self.product_name = self.products[random.randint(0, len(self.products)-1)]
 
                     time.sleep(1)
 
-                # Seller loop
+                # Pausing helps seller to get registered with nameserver
                 while True:
                     time.sleep(1)
 
@@ -172,23 +201,22 @@ class Peer(Thread):
         Lookup a product in the peer's neighbor list
         :param bID: The id of the buyer
         :param product_name: The name of the product to lookup
-        :param hopcount: The number of hops left
+        :param hopcount: The number of hops left. Set lower than the maximum distance between peers in the network
         :param search_path: The path of the search
         :return: nothing
         """
         # this procedure, executed initially by buyer processes then recursively 
-        # between directly connected peer processes in the network, should search 
-        # the network; all matching sellers respond to this message with their IDs. 
-        # The hopcount, which should be set lower than the maximum distance between peers in the network, 
-        # is decremented at each hop and the message is discarded when it reaches 0.
+        # between directly connected peer processes in the network
         
         last_peer = search_path[-1]
         hopcount -= 1
 
+        # If hopcount is negative it means that the search has reached the maximum distance
         if hopcount < 0:
             return
 
         try:
+            # If a seller is found with the product, add it to the seller list
             if self.role == "seller" and self.product_name == product_name and self.product_count >= 0:
                 print(datetime.datetime.now(), "seller found with ID: ", self.id)
                 # inserting seller id at the front of the search path for easier reply
@@ -196,8 +224,10 @@ class Peer(Thread):
                 self.executor.submit(self.reply, self.id, search_path)
 
             else:
-                # continue lookup
+                # Else search the neighbor list of the current peer
                 for neighbor_name in self.neighbors:
+
+                    # Make sure that the search does not go back to the peer that sent the request
                     if neighbor_name != last_peer:
                         with Pyro5.api.Proxy(self.neighbors[neighbor_name]) as neighbor:
                             if self.id not in search_path:
@@ -217,6 +247,7 @@ class Peer(Thread):
         """
 
         try:
+            # Lock the product count to maintain consistency during concurrent buy requests
             with self.product_count_lock:
                 if self.product_count > 0:
 
@@ -246,22 +277,21 @@ class Peer(Thread):
         """
 
         try:
-            # only 1 peer id in reply_path which is the seller
+            # Only 1 peer id in reply_path which is the seller
             if reply_path and len(reply_path) == 1:
                 print(datetime.datetime.now(), "Seller", peer_id, "responded to buyer", self.id)
 
-                # adding seller to the list of sellers
+                # Adding seller to the list of sellers
                 with self.seller_list_lock:
                     if reply_path[0] not in self.seller_list:
                         self.seller_list.extend(reply_path)
 
+            # If more than 1 peer id in reply_path, continue backward traversal
             elif reply_path and len(reply_path) > 1:
                 intermediate_peer = reply_path.pop()
                 with Pyro5.api.Proxy("PYRONAME:" + intermediate_peer) as neighbor:
                     neighbor.reply(peer_id, reply_path)
 
         except Exception as e:
-            template = "An exception of type {0} occurred at Reply. Arguments:\n{1!r}"
-            message = template.format(type(e).__name__, e.args)
-            print(datetime.datetime.now(), message)
-            sys.exit()
+            print(datetime.datetime.now(), "Exception in reply", e)
+            return
