@@ -1,0 +1,73 @@
+No server found, start one
+Not starting broadcast server for localhost.
+NS running on localhost:9090 (127.0.0.1)
+URI = PYRO:Pyro.NameServer@localhost:9090
+2022-10-19 20:00:28.545732 buyer1 joins to buy  boar
+2022-10-19 20:00:28.547330 seller5 joins to sell  boar
+2022-10-19 20:00:28.553595 buyer0 joins to buy  boar
+0.008556   buyer1
+0.002109   buyer0
+0.042309   buyer1
+0.037269   buyer0
+0.01742   buyer1
+0.017261   buyer0
+0.015925   buyer0
+0.032183   buyer1
+0.032534   buyer0
+0.012639   buyer1
+0.017075   buyer0
+0.012441   buyer1
+0.003952   buyer0
+0.00504   buyer1
+0.00893   buyer0
+0.015609   buyer1
+0.01223   buyer0
+0.014919   buyer1
+0.008005   buyer0
+0.005947   buyer1
+0.006238   buyer0
+0.007474   buyer1
+0.01205   buyer0
+0.007993   buyer1
+0.002168   buyer0
+0.00407   buyer1
+0.003342   buyer0
+0.010738   buyer1
+0.00776   buyer0
+0.007369   buyer1
+0.003629   buyer0
+0.008138   buyer1
+0.002671   buyer0
+0.007668   buyer1
+0.002614   buyer0
+0.003183   buyer1
+0.005039   buyer0
+0.011011   buyer1
+0.01623   buyer0
+0.011151   buyer1
+0.007618   buyer0
+0.007585   buyer1
+0.001722   buyer0
+0.006457   buyer1
+0.014892   buyer0
+0.011419   buyer1
+0.00393   buyer0
+0.005133   buyer1
+0.003011   buyer0
+0.005326   buyer1
+0.007892   buyer0
+0.010895   buyer1
+0.007128   buyer0
+0.00707   buyer1
+0.00801   buyer0
+0.008089   buyer1
+0.008618   buyer0
+0.008562   buyer1
+0.007837   buyer0
+0.006467   buyer1
+0.010321   buyer0
+0.007439   buyer1
+0.007055   buyer0
+0.021266   buyer1
+0.007888   buyer0
+0.00799   buyer1

@@ -106,10 +106,12 @@ class Peer(Thread):
                     for neighbor_name in self.neighbors:
                         with Pyro5.api.Proxy(self.neighbors[neighbor_name]) as neighbor:
                             search_path = [self.id]
-                            print(datetime.datetime.now() , self.id, "searching for ", self.product_name, " in ", neighbor_name)
+                            self.start = datetime.datetime.now()
+                            # print(datetime.datetime.now(), " search ", self.id)
+                            # print(self.start , self.id, "searching for ", self.product_name, " in ", neighbor_name)
                             # print("neighbor", neighbor)
                             # neighbor._pyroClaimOwnership()
-                            neighbor.lookup(self.id, self.product_name, 10, search_path)
+                            neighbor.lookup(self.id, self.product_name, 3, search_path)
                             # print("lookup_requests", lookup_requests)
 
                     # for request in lookup_requests:
@@ -118,16 +120,17 @@ class Peer(Thread):
 
                     with self.seller_list_lock:
 
-                        print(datetime.datetime.now(), "seller list for ", self.id , "is: ", self.seller_list)
+                        # print(datetime.datetime.now(), "seller list for ", self.id , "is: ", self.seller_list)
                         # select random seller
                         if self.seller_list:
                             random_seller = self.seller_list[random.randint(0, len(self.seller_list)-1)]
 
                             with Pyro5.client.Proxy(self.neighbors[random_seller]) as seller:
                                 seller._pyroClaimOwnership()
-                                seller.buy(self.id)
+                                seller.buy(self.id, self.start)
                         else:
-                            print(datetime.datetime.now(), "no sellers found within hop limit for ", self.id)
+                            # print(datetime.datetime.now(), "no sellers found within hop limit for ", self.id)
+                            print((datetime.datetime.now() - self.start).total_seconds(), " ", self.id)
                         
                         self.seller_list = []
                         self.product_name = self.products[random.randint(0, len(self.products)-1)]
@@ -160,7 +163,7 @@ class Peer(Thread):
 
         try:
             if self.role == "seller" and self.product_name == product_name and self.product_count >= 0:
-                print(datetime.datetime.now(), "seller found with ID: ", self.id)
+                # print(datetime.datetime.now(), "seller found with ID: ", self.id)
                 # inserting seller id at the front of the search path for easier reply
                 search_path.insert(0, self.id)
                 self.executor.submit(self.reply, self.id, search_path)
@@ -182,26 +185,31 @@ class Peer(Thread):
 
     @Pyro5.server.expose
     # :peer_id: the id of the buyer
-    def buy(self, peer_id):
+    def buy(self, peer_id, start):
 
         try:
             with self.product_count_lock:
+                if type(start) is str:
+                    start = datetime.datetime.strptime(start, "%Y-%m-%dT%H:%M:%S.%f")
+                print((datetime.datetime.now() - start).total_seconds(), " ", peer_id)
                 if self.product_count > 0:
 
                     self.product_count -= 1
-                    print("*******\n", datetime.datetime.now(), peer_id, "bought", self.product_name, "from", self.id, self.product_count, "remain now", "\n*******")
+                    # print("*******\n", datetime.datetime.now(), peer_id, "bought", self.product_name, "from", self.id, self.product_count, "remain now", "\n*******")
                     return True
             
                 # if self.product_count == 0, pick random item to sell
                 else:
-                    print(datetime.datetime.now(), peer_id, "failed to buy", self.product_name, "from", self.id, "no more items")
+                    # print(datetime.datetime.now(), peer_id, "failed to buy", self.product_name, "from", self.id, "no more items")
                     self.product_name = self.products[random.randint(0, len(self.products) - 1)]
                     self.product_count = self.n
-                    print(datetime.datetime.now(), self.id , "now selling", self.product_name)
+                    # print(datetime.datetime.now(), self.id , "now selling", self.product_name)
                     return False
 
         except Exception as e:
             print(datetime.datetime.now(), "Exception in buy", e)
+            print(type(start))
+            print(start)
             return
 
     @Pyro5.server.expose
@@ -211,7 +219,7 @@ class Peer(Thread):
         try:
             # only 1 peer id in reply_path which is the seller
             if reply_path and len(reply_path) == 1:
-                print(datetime.datetime.now(), "Seller", peer_id, "responded to buyer", self.id)
+                # print(datetime.datetime.now(), "Seller", peer_id, "responded to buyer", self.id)
 
                 # adding seller to the list of sellers
                 with self.seller_list_lock:

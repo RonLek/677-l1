@@ -39,18 +39,18 @@ def get_people(config):
     # Future implementation may include hmac key for security
     # haskey = False
 
-    # at least 1 buyer
-    role = 'buyer'
-    id = role + str(n_people-2)
-    people.append(Peer(id, role, n_items, goods, ns_name))
+    # # at least 1 buyer
+    # role = 'buyer'
+    # id = role + str(n_people-2)
+    # people.append(Peer(id, role, n_items, goods, ns_name))
 
     # at least 1 seller
     role = 'seller'
     id = role + str(n_people-1)
     people.append(Peer(id, role, n_items, goods, ns_name))
 
-    for i in range(n_people - 2):
-        role = roles[random.randint(0,len(roles) - 1)]
+    for i in range(n_people - 5):
+        role = roles[0] # roles[random.randint(0,len(roles) - 1)]
         id = role + str(i) # + socket.gethostname()
         # n_items = int(config["DEFAULT"]["N_ITENS"])
         peer = Peer(id, role, n_items, goods, ns_name)

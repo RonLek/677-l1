@@ -1,0 +1,104 @@
+No server found, start one
+Not starting broadcast server for localhost.
+NS running on localhost:9090 (127.0.0.1)
+URI = PYRO:Pyro.NameServer@localhost:9090
+2022-10-19 19:53:01.994911 seller5 joins to sell  boar
+2022-10-19 19:53:01.995602 buyer0 joins to buy  boar
+2022-10-19 19:53:01.998847 buyer1 joins to buy  boar
+2022-10-19 19:53:02.000863 buyer2 joins to buy  salt
+0.012919   buyer1
+0.003698   buyer2
+0.002466   buyer0
+0.015806   buyer1
+0.008352   buyer2
+0.023099   buyer0
+0.004724   buyer1
+0.002642   buyer2
+0.008689   buyer0
+0.003509   buyer1
+0.001492   buyer2
+0.002937   buyer0
+0.008717   buyer1
+0.007968   buyer2
+0.015913   buyer0
+0.00749   buyer1
+0.015341   buyer2
+0.00487   buyer0
+0.003303   buyer1
+0.009195   buyer2
+0.006496   buyer0
+0.007561   buyer1
+0.003827   buyer2
+0.015374   buyer0
+0.003709   buyer1
+0.002192   buyer2
+0.001882   buyer0
+0.007215   buyer1
+0.007356   buyer2
+0.014347   buyer0
+0.008224   buyer1
+0.01506   buyer2
+0.011936   buyer0
+0.010535   buyer1
+0.007184   buyer2
+0.010019   buyer0
+0.007366   buyer1
+0.005093   buyer2
+0.004726   buyer0
+0.007318   buyer1
+0.007684   buyer2
+0.014367   buyer0
+0.00798   buyer1
+0.008259   buyer2
+0.005667   buyer0
+0.002806   buyer1
+0.002753   buyer2
+0.013956   buyer0
+0.009631   buyer1
+0.008662   buyer2
+0.006195   buyer0
+0.012616   buyer1
+0.006   buyer2
+0.016065   buyer0
+0.011983   buyer1
+0.017073   buyer2
+0.015256   buyer0
+0.011629   buyer1
+0.006885   buyer2
+0.030225   buyer0
+0.013249   buyer1
+0.002936   buyer2
+0.01209   buyer0
+0.015753   buyer1
+0.004435   buyer2
+0.019386   buyer0
+0.014622   buyer1
+0.006689   buyer2
+0.025331   buyer0
+0.015431   buyer1
+0.001235   buyer2
+0.022265   buyer0
+0.007233   buyer1
+0.008775   buyer2
+0.016909   buyer0
+0.011802   buyer1
+0.008894   buyer2
+0.013242   buyer0
+0.007904   buyer1
+0.004513   buyer2
+0.014573   buyer0
+0.007681   buyer1
+0.007654   buyer2
+0.006177   buyer0
+0.007768   buyer1
+0.007161   buyer2
+0.013514   buyer0
+0.007412   buyer1
+0.008542   buyer2
+2022-10-19 19:53:32.861914 Exception in lookup cannot schedule new futures after shutdown
+2022-10-19 19:53:32.863589 Exception in lookup cannot schedule new futures after shutdown
+0.001678   buyer0
+2022-10-19 19:53:33.383950 Exception in lookup cannot schedule new futures after shutdown
+0.007291   buyer1
+2022-10-19 19:53:33.536422 Exception in lookup cannot schedule new futures after shutdown
+0.008072   buyer2

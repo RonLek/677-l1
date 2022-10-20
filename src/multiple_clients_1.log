@@ -1,0 +1,62 @@
+No server found, start one
+Not starting broadcast server for localhost.
+NS running on localhost:9090 (127.0.0.1)
+URI = PYRO:Pyro.NameServer@localhost:9090
+2022-10-19 20:04:06.175750 buyer0 joins to buy  salt
+2022-10-19 20:04:06.175967 seller5 joins to sell  fish
+0.004599   buyer0
+0.004106   buyer0
+0.003854   buyer0
+0.003862   buyer0
+0.00402   buyer0
+0.004157   buyer0
+0.00423   buyer0
+0.004161   buyer0
+0.004035   buyer0
+0.00431   buyer0
+0.003906   buyer0
+0.004035   buyer0
+0.005546   buyer0
+0.004118   buyer0
+0.005427   buyer0
+0.016975   buyer0
+0.004417   buyer0
+0.006329   buyer0
+0.00722   buyer0
+0.003348   buyer0
+0.004505   buyer0
+0.005624   buyer0
+0.004439   buyer0
+0.005712   buyer0
+0.007243   buyer0
+0.004249   buyer0
+0.004054   buyer0
+0.003817   buyer0
+0.003866   buyer0
+0.004931   buyer0
+0.006701   buyer0
+0.017106   buyer0
+0.011528   buyer0
+0.007721   buyer0
+0.002196   buyer0
+0.005273   buyer0
+0.01275   buyer0
+0.00768   buyer0
+0.005459   buyer0
+0.007702   buyer0
+0.007469   buyer0
+0.013786   buyer0
+0.007189   buyer0
+0.005014   buyer0
+0.007405   buyer0
+0.005133   buyer0
+0.007501   buyer0
+0.004119   buyer0
+0.00401   buyer0
+0.003867   buyer0
+0.002832   buyer0
+0.004089   buyer0
+0.003843   buyer0
+0.003868   buyer0
+2022-10-19 20:05:01.609746 Exception in lookup cannot schedule new futures after shutdown
+0.001951   buyer0
