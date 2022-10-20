@@ -11,7 +11,7 @@ import sys
 
 class Peer(Thread):
 
-    def __init__(self, id, role, product_count, products, hostname):
+    def __init__(self, id, role, product_count, products, hostname, max_neighbors, hopcount):
         Thread.__init__(self)
         self.id = id
         self.hostname = hostname
@@ -27,6 +27,8 @@ class Peer(Thread):
         self.seller_list_lock = Lock()
         self.product_count_lock = Lock()
         self.seller_list = []
+        self.max_neighbors = max_neighbors
+        self.hopcount = hopcount
 
     def get_random_neighbors(self):
         neighbor_list = []
@@ -47,8 +49,8 @@ class Peer(Thread):
         # randomly pick one neighbor
         # print("neighbor list", neighbor_list)
         if neighbor_list:
-            for i in range(3):
-                if self.get_neighbor_len() >= 3:
+            for i in range(self.max_neighbors):
+                if self.get_neighbor_len() >= self.max_neighbors:
                     break
                 random_neighbor_id = neighbor_list[random.randint(0, len(neighbor_list)-1)]
                 self.neighbors[random_neighbor_id] = self.ns.lookup(random_neighbor_id)
@@ -111,7 +113,7 @@ class Peer(Thread):
                             # print(self.start , self.id, "searching for ", self.product_name, " in ", neighbor_name)
                             # print("neighbor", neighbor)
                             # neighbor._pyroClaimOwnership()
-                            neighbor.lookup(self.id, self.product_name, 3, search_path)
+                            neighbor.lookup(self.id, self.product_name, self.hopcount, search_path)
                             # print("lookup_requests", lookup_requests)
 
                     # for request in lookup_requests:

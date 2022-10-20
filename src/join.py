@@ -18,10 +18,12 @@ def get_people(config):
     #     n_people = int(config["DEFAULT"]["N_PEOPLE"])
     n_people = 6
     n_items = 5
+    max_neighbors = 1
     roles = ['buyer', 'seller']
     goods = ['fish', 'salt', 'boar']
     ns_name = sys.argv[1]
     people = []
+    hopcount = 3
     # hmac_key = config["NETWORK_INFO"]["HMAC_KEY"]
 
     # Starts name server
@@ -47,13 +49,13 @@ def get_people(config):
     # at least 1 seller
     role = 'seller'
     id = role + str(n_people-1)
-    people.append(Peer(id, role, n_items, goods, ns_name))
+    people.append(Peer(id, role, n_items, goods, ns_name, max_neighbors, hopcount))
 
     for i in range(n_people - 5):
         role = roles[0] # roles[random.randint(0,len(roles) - 1)]
         id = role + str(i) # + socket.gethostname()
         # n_items = int(config["DEFAULT"]["N_ITENS"])
-        peer = Peer(id, role, n_items, goods, ns_name)
+        peer = Peer(id, role, n_items, goods, ns_name, max_neighbors, hopcount)
         people.append(peer)
 
     return people

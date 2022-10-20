@@ -1,0 +1,45 @@
+No server found, start one
+Not starting broadcast server for localhost.
+NS running on localhost:9090 (127.0.0.1)
+URI = PYRO:Pyro.NameServer@localhost:9090
+2022-10-19 21:06:55.764610 buyer0 joins to buy  fish
+2022-10-19 21:06:55.765124 seller5 joins to sell  fish
+0.005603   buyer0
+0.017002   buyer0
+0.003984   buyer0
+0.005657   buyer0
+0.008005   buyer0
+0.00435   buyer0
+0.005821   buyer0
+0.010039   buyer0
+0.005619   buyer0
+0.007862   buyer0
+0.004192   buyer0
+0.005207   buyer0
+0.004145   buyer0
+0.006047   buyer0
+0.004428   buyer0
+0.008625   buyer0
+0.004022   buyer0
+0.004117   buyer0
+0.003914   buyer0
+0.007071   buyer0
+0.007426   buyer0
+0.005394   buyer0
+0.007805   buyer0
+0.002287   buyer0
+0.003452   buyer0
+0.004658   buyer0
+0.004059   buyer0
+0.004772   buyer0
+0.016818   buyer0
+0.004385   buyer0
+0.004072   buyer0
+0.010656   buyer0
+0.012093   buyer0
+0.007399   buyer0
+0.005125   buyer0
+0.007541   buyer0
+0.003873   buyer0
+0.004074   buyer0
+0.004176   buyer0
